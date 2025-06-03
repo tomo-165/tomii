@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+/* ヘッダー */
+#header {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6% 0 1.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 150px;
+}
+
+.top_photo img {
+    width: 100%;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+.pc_nav li {
+    color: white;
+    font-size: 16px;
+    font-weight: SemiCondensed;
+}
+
+.theme {
+    text-align: center;
+    position: absolute;
+    top: 52%;
+    left: 12%;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.theme h2 {
+    color: white;
+    font-size: 63px;
+}
+
+.top_plane {
+    width: 110px;
+}
+
+.theme ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 共通 */
+h2 {
+    text-align: center;
+    color: #031c63;
+}
+
+
+/* 導入部分 */
+#intro p {
+    text-align: center;
+}
+
+#intro h2 {
+    font-size: 33px;
+    margin-bottom: 110px;
+}
+
+#intro p {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.plane {
+    width: 100px;
+    margin-top: 150px;
+    margin-left: 120px;
+}
+
+.hand {
+    width: 162px;
+    margin: 0 160px 205px auto;
+
+}
+
+
+/* WORKS */
+#WORKS h2 {
+    font-size: 32px;
+    margin-bottom: 123px;
+}
+
+
+.more1 {
+    font-size: 16px;
+    text-align: right;
+    margin: 81px 138px 250px auto;
+}
+
+
+/* スライダー */
+.slick-next {
+    right: 5%;
+}
+
+.slick-prev {
+    left: 5%;
+    z-index: 100;
+}
+
+.slick-next:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #bedaf6;
+    border-right: 2px solid #bedaf6;
+    transform: rotate(45deg);
+}
+
+.slick-prev:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #bedaf6;
+    border-left: 2px solid #bedaf6;
+    transform: rotate(-45deg);
+}
+
+.WORKS_photo img {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 100px;
+    color: #666;
+    margin: 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    opacity: 0.4;
+    transition: all 300ms ease;
+}
+
+.WORKS_photo img.slick-center {
+    /* color: #f50057; */
+    opacity: 1;
+    transform: scale(1.16);
+}
+
+
+/* ABOUTME */
+#ABOUTME h2 {
+    font-size: 32px;
+    margin-bottom: 123px;
+}
+
+.about_group {
+    display: flex;
+    margin-bottom: 300px;
+}
+
+.aboutme {
+    width: 350px;
+    margin-left: 266px;
+}
+
+.sentence_group {
+    text-align: left;
+    width: 26%;
+    padding-left: 100px;
+}
+
+.name {
+    font-size: 22px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.sentence {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.more2 {
+    font-size: 16px;
+    margin-top: 86px;
+}
+
+
+
+/* SKILL */
+#SKILL h2 {
+    font-size: 32px;
+    margin-bottom: 128px;
+}
+
+.design_box,
+.code_box {
+    background-color: #f3fdff;
+    width: 37%;
+    height: 580px;
+    margin-bottom: 313px;
+    box-shadow: inset 18px #ffffff;
+}
+
+.design_box {
+    margin: 0 104px 0 130px;
+}
+
+.skill_title {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.code_box {
+    margin-right: 130px;
+}
+
+#SKILL ul {
+    display: flex;
+}
+
+.skill_design,
+.skill_code {
+    text-align: center;
+}
+
+.design {
+    width: 144px;
+    margin: 0 auto;
+}
+
+.code {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.skill_detail {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-top: 60px;
+    width: 83%;
+    margin: 0 auto;
+}
+
+.skill {
+    font-size: 18px;
+    padding-top: 50px;
+}
+
+/* CONTACT */
+#CONTACT h2 {
+    font-size: 32px;
+}
+
+#CONTACT p {
+    text-align: center;
+    margin-top: 123px;
+    margin-bottom: 90px;
+    line-height: 1.8;
+}
+
+.send {
+    width: 210px;
+    margin: 90px auto 66px auto;
+}
+
+
+/* フッター */
+#footer {
+    position: relative
+}
+
+.footer_wrap {
+    position: absolute;
+    top: 24%;
+    left: 45%;
+}
+
+.footer_wrap p {
+    color: white;
+    margin-top: 30px;
+}
+
+/* ページトップボタン */
+.pagetop {
+    position: fixed;
+    right: 150px;
+    bottom: 50px;
+    width: 150px;
+}
