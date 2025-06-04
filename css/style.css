@@ -39,24 +39,30 @@
 .theme {
     text-align: center;
     position: absolute;
-    top: 52%;
-    left: 12%;
+    top: 45%;
+    left: 20%;
     /* width: 100%; */
     box-sizing: border-box;
 }
 
 .theme h2 {
+    font-family: "TA恋心";
     color: white;
     font-size: 63px;
 }
 
-.top_plane {
-    width: 110px;
+.top_traj {
+    width: 100%;
 }
 
-.theme ul {
+.top_plane {
+    width: 110px;
+    padding-bottom: 25px;
+}
+
+.theme_img {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 
@@ -66,6 +72,12 @@ h2 {
     color: #031c63;
 }
 
+.title_img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+    padding-left: 80px;
+}
 
 /* 導入部分 */
 #intro p {
@@ -75,6 +87,7 @@ h2 {
 #intro h2 {
     font-size: 33px;
     margin-bottom: 110px;
+    color: #00002d;
 }
 
 #intro p {
@@ -98,9 +111,15 @@ h2 {
 /* WORKS */
 #WORKS h2 {
     font-size: 32px;
-    margin-bottom: 123px;
 }
 
+.traj_b {
+    width: 250px;
+}
+
+.plane_b {
+    width: 110px;
+}
 
 .more1 {
     font-size: 16px;
@@ -139,29 +158,34 @@ h2 {
     transform: rotate(-45deg);
 }
 
+.WORKS_photo {
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+}
+
 .WORKS_photo img {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 100px;
+    /* align-items: center;
+    /* font-size: 2rem; */
+    /* font-weight: bold; */
+    /* line-height: 100px;
     color: #666;
-    margin: 10px;
     text-align: center;
     background-color: #e0e0e0;
-    opacity: 0.4;
+    opacity: 0.4; */
     transition: all 300ms ease;
+    transform: scale(0.8)
 }
 
 .WORKS_photo img.slick-center {
-    /* color: #f50057; */
     opacity: 1;
-    transform: scale(1.16);
+    transform: scale(1);
 }
 
 
 /* ABOUTME */
 #ABOUTME h2 {
     font-size: 32px;
-    margin-bottom: 123px;
 }
 
 .about_group {
@@ -186,6 +210,10 @@ h2 {
     margin-bottom: 50px;
 }
 
+.namecolor {
+    color: #103099;
+}
+
 .sentence {
     font-size: 18px;
     line-height: 1.5;
@@ -201,7 +229,6 @@ h2 {
 /* SKILL */
 #SKILL h2 {
     font-size: 32px;
-    margin-bottom: 128px;
 }
 
 .design_box,
@@ -265,7 +292,7 @@ h2 {
 
 #CONTACT p {
     text-align: center;
-    margin-top: 123px;
+    /* margin-top: 123px; */
     margin-bottom: 90px;
     line-height: 1.8;
 }
