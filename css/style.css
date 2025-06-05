@@ -182,6 +182,11 @@ h2 {
     transform: scale(1);
 }
 
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+
 
 /* ABOUTME */
 #ABOUTME h2 {
@@ -191,17 +196,16 @@ h2 {
 .about_group {
     display: flex;
     margin-bottom: 300px;
+    justify-content: space-between;
 }
 
 .aboutme {
     width: 350px;
-    margin-left: 266px;
 }
 
 .sentence_group {
     text-align: left;
     width: 26%;
-    padding-left: 100px;
 }
 
 .name {
