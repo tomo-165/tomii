@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/works.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <header id="HEADER">
+        <div class="top_photo">
+            <img src="./images/header.jpg" alt="空の写真">
+        </div>
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <img src="./images/logo.svg" alt="=ロゴマーク">
+            </h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="WORKS">
+        <h2>
+            WORKS
+        </h2>
+        <div class="title_img">
+            <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
+            <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
+        </div>
+        <di class="works_choice">
+            <ul>
+                <li>バナー広告</li>
+                <li>WEBサイト</li>
+            </ul>
+        </di>
+
+        <h3>
+            バナー広告
+        </h3>
+        <ul class="banner_box1">
+            <li>
+                <div>
+                    <div class="banner1">
+                        <img src="./images/mobile_list.png" alt="デザスタmobile">
+                    </div>
+                    <p>デザスタmobile</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="banner2">
+                        <img src="./images/ice_list.png" alt="アイスクリーム">
+                    </div>
+                    <p>アイスクリーム</p>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="banner_box2">
+            <li>
+                <div>
+                    <div class="banner3">
+                        <img src="./images/burgerluxu_list.png" alt="デラックスバーガー（高級版）">
+                    </div>
+                    <p>デラックスバーガー（高級版）</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="banner4">
+                        <img src="./images/burgerpop_list.png" alt="デラックスバーガー（POP版）">
+                    </div>
+                    <p>デラックスバーガー（POP版）</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <footer id="FOOTER">
+        <div>
+            <img src="./images/futter.jpg" alt="空の写真">
+        </div>
+        <div class="footer_wrap">
+            <h1 class="header_logo">
+                <img src="./images/logo.svg" alt="=ロゴマーク">
+            </h1>
+            <p>©tomii design 2025</p>
+        </div>
+    </footer>
+
+    <div class="pagetop">
+        <a href="#header">
+            <img src="./images/top_button.png" alt="topへ">
+        </a>
+    </div>
+
+</body>
+
+</html>

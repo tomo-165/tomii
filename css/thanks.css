@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* ヘッダー */
+#HEADER {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 3% 0 1.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 150px;
+}
+
+.top_photo img {
+    width: 100%;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+.pc_nav li {
+    color: white;
+    font-size: 16px;
+    font-weight: SemiCondensed;
+}
+
+/* thanks */
+
+h2 {
+    text-align: center;
+    color: #00002d;
+    font-size: 38px;
+    font-family: ta-koigokoro, sans-serif;
+    margin-top: 50px;
+}
+
+.thanks {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.plane {
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.hand {
+    width: 162px;
+    margin: 0 160px 150px auto;
+}
+
+
+/* フッター */
+
+#FOOTER {
+    position: relative
+}
+
+#FOOTER img {
+    width: 100%;
+}
+
+.footer_wrap {
+    position: absolute;
+    top: 24%;
+    left: 45%;
+}
+
+.footer_wrap p {
+    color: white;
+    margin-top: 30px;
+}
+
+/* ページトップボタン */
+.pagetop {
+    position: fixed;
+    right: 150px;
+    bottom: 50px;
+    width: 150px;
+}

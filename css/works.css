@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* ヘッダー */
+#HEADER {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 3% 0 1.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 150px;
+}
+
+.top_photo img {
+    width: 100%;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+.pc_nav li {
+    color: white;
+    font-size: 16px;
+    font-weight: SemiCondensed;
+}
+
+
+/* 共通 */
+h2 {
+    text-align: center;
+    color: #031c63;
+    font-size: 32px;
+    font-family: acumin-variable, sans-serif;
+    margin-top: 150px;
+}
+
+.title_img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+    padding-left: 80px;
+}
+
+.traj_b {
+    width: 250px;
+}
+
+.plane_b {
+    width: 110px;
+}
+
+/* WORKS */
+.works_choice ul {
+    display: flex;
+    text-align: center;
+}
+
+
+/* フッター */
+
+#FOOTER {
+    position: relative
+}
+
+#FOOTER img {
+    width: 100%;
+}
+
+.footer_wrap {
+    position: absolute;
+    top: 24%;
+    left: 45%;
+}
+
+.footer_wrap p {
+    color: white;
+    margin-top: 30px;
+}
+
+/* ページトップボタン */
+.pagetop {
+    position: fixed;
+    right: 150px;
+    bottom: 50px;
+    width: 150px;
+}

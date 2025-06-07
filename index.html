@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>ポートフォリオ_トップ</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 <body>
@@ -116,9 +126,9 @@
                     <div class="design">
                         <img src="./images/design.svg" alt="イラスト">
                     </div>
-                    <p class="skill">illustrator/photoshop/figma</p>
+                    <p class="skill">illustrator/Photoshop/Figma</p>
                     <p class="skill_detail">
-                        基本的な操作は可能です。ポートフォリオのデザインは、illustrator及びphotoshopを使用しました。photoshopでは、切り抜きや合成、写真の加工ができます。</p>
+                        基本的な操作は可能です。ポートフォリオのデザインは、illustrator及びPhotoshopを使用しました。Photoshopでは、切り抜きや合成、写真の加工ができます。</p>
                 </div>
             </li>
             <li class="code_box">
@@ -127,7 +137,7 @@
                     <div class="code">
                         <img src="./images/code.svg" alt="イラスト">
                     </div>
-                    <p class="skill">html/css/javascript/jQuery</p>
+                    <p class="skill">HTML/CSS/JavaScript/jQuery</p>
                     <p class="skill_detail">コーディングでは、Visual Studio
                         Codeを使用し、命名規則を用いたコーディングができます。どの端末でも見やすいように、レスポンシブ対応ができます。</p>
                 </div>
@@ -143,11 +153,17 @@
             <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
             <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
         </div>
-        <p>
+        <p class="contact_lang">
             当サイトをご覧いただきありがとうございます。<br>
             制作のご相談やご依頼はこちらからお気軽にお問い合わせください。<br>
             お問い合わせいただいた内容を確認後、ご連絡いたします。
         </p>
+        <div class="contact_detail">
+            <p>お名前<span class="contactcolor">（必須）</span></p>
+            <p>メールアドレス<span class="contactcolor">（必須）</span></p>
+            <p>件名</p>
+            <p>お問い合わせ内容<span class="contactcolor">（必須）</span></p>
+        </div>
         <div class="send">
             <img src="./images/send.svg" alt="送信ボタン">
         </div>

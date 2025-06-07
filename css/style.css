@@ -46,17 +46,17 @@
 }
 
 .theme h2 {
-    font-family: "TA恋心";
+    font-family: ta-koigokoro, sans-serif;
     color: white;
     font-size: 63px;
 }
 
 .top_traj {
-    width: 100%;
+    max-width: 1440px;
 }
 
 .top_plane {
-    width: 110px;
+    max-width: 110px;
     padding-bottom: 25px;
 }
 
@@ -70,6 +70,7 @@
 h2 {
     text-align: center;
     color: #031c63;
+    font-family: acumin-variable, sans-serif;
 }
 
 .title_img {
@@ -77,6 +78,14 @@ h2 {
     justify-content: center;
     margin-bottom: 94px;
     padding-left: 80px;
+}
+
+.traj_b {
+    width: 250px;
+}
+
+.plane_b {
+    width: 110px;
 }
 
 /* 導入部分 */
@@ -88,11 +97,13 @@ h2 {
     font-size: 33px;
     margin-bottom: 110px;
     color: #00002d;
+    font-family: ta-koigokoro, sans-serif;
 }
 
 #intro p {
     font-size: 28px;
     margin-bottom: 30px;
+    font-family: ta-koigokoro, sans-serif;
 }
 
 .plane {
@@ -104,21 +115,17 @@ h2 {
 .hand {
     width: 162px;
     margin: 0 160px 205px auto;
-
 }
 
 
 /* WORKS */
+#WORKS {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+
 #WORKS h2 {
     font-size: 32px;
-}
-
-.traj_b {
-    width: 250px;
-}
-
-.plane_b {
-    width: 110px;
 }
 
 .more1 {
@@ -130,11 +137,11 @@ h2 {
 
 /* スライダー */
 .slick-next {
-    right: 5%;
+    right: 0%;
 }
 
 .slick-prev {
-    left: 5%;
+    left: 0%;
     z-index: 100;
 }
 
@@ -189,6 +196,11 @@ h2 {
 
 
 /* ABOUTME */
+#ABOUTME {
+    max-width: 830px;
+    margin: 0 auto;
+}
+
 #ABOUTME h2 {
     font-size: 32px;
 }
@@ -205,7 +217,7 @@ h2 {
 
 .sentence_group {
     text-align: left;
-    width: 26%;
+    width: 46%;
 }
 
 .name {
@@ -259,6 +271,9 @@ h2 {
 
 #SKILL ul {
     display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .skill_design,
@@ -268,6 +283,7 @@ h2 {
 
 .design {
     width: 144px;
+    height: 140px;
     margin: 0 auto;
 }
 
@@ -290,15 +306,28 @@ h2 {
 }
 
 /* CONTACT */
+#CONTACT {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
 #CONTACT h2 {
     font-size: 32px;
 }
 
-#CONTACT p {
+.contact_lang {
     text-align: center;
-    /* margin-top: 123px; */
     margin-bottom: 90px;
     line-height: 1.8;
+}
+
+.contactcolor {
+    color: #ff0000;
+    transform: scale(0.7, 0.7);
+}
+
+.contact_detail {
+    text-align: left;
 }
 
 .send {
@@ -310,6 +339,10 @@ h2 {
 /* フッター */
 #footer {
     position: relative
+}
+
+#footer img {
+    width: 100%;
 }
 
 .footer_wrap {
