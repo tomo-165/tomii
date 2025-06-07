@@ -36,109 +36,90 @@
     font-weight: SemiCondensed;
 }
 
-
-/* 共通 */
-h2 {
-    text-align: center;
+/* バナー（デザスタmobile） */
+/* 上部分 */
+h3 {
+    margin: 100px 0 60px 220px;
     color: #031c63;
-    font-size: 32px;
-    font-family: acumin-variable, sans-serif;
-    margin-top: 150px;
 }
 
-.title_img {
+h4 {
+    color: #031c63;
+    font-size: 18px;
+    border-bottom: 1px solid #bedaf6;
+}
+
+.bannerweb_img {
+    max-width: 890px;
+    margin: 0 auto 100px;
+}
+
+/* 写真 */
+/* バナー */
+.mobile {
+    height: 430px;
+}
+
+.mobile_sp {
+    height: 300px;
+    padding-left: 15px;
+}
+
+
+/* 下部分 */
+.bannerweb ul {
     display: flex;
-    justify-content: center;
-    margin-bottom: 94px;
-    padding-left: 80px;
-}
-
-.traj_b {
-    width: 250px;
-}
-
-.plane_b {
-    width: 110px;
-}
-
-
-/* ABOUTME */
-
-#ABOUTME {
-    max-width: 830px;
+    max-width: 890px;
     margin: 0 auto;
-}
-
-.about_group {
-    display: flex;
-    margin-bottom: 300px;
     justify-content: space-between;
 }
 
-.aboutme {
-    width: 350px;
-}
-
-.sentence_group {
-    text-align: left;
-    width: 46%;
-}
-
-.name {
-    font-size: 22px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.namecolor {
-    color: #103099;
-}
-
-.sentence p {
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-.bottom_space {
-    margin-bottom: 1em;
-}
-
-.more2 {
+.bannerweb p {
+    color: #00002d;
     font-size: 16px;
-    margin-top: 50px;
-    line-height: 1.4;
+    line-height: 1.7;
+    margin-top: -18px;
+
+}
+
+.box1 {
+    max-width: 580px;
+}
+
+.box2 {
+    max-width: 280px;
+}
+
+/* webサイトの詳細部分 */
+.sample {
+    max-width: 740px;
+    margin: 0 auto 80px;
+    align-self: flex-start;
+    display: flex;
+    margin: 250px auto 100px;
+    justify-content: space-between;
 }
 
 
-/* CONTACT */
 
-#CONTACT {
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.contact_lang {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.contact_btn p {
+/* 一覧へのボタン */
+.banner_btn p {
     color: #ffffff;
     font-size: 18px;
     display: inline-block;
-    padding: 0 60px;
+    padding: 0 85px;
 }
 
-.contact_btn {
+.banner_btn {
     border-radius: 45px;
     background-color: #2845a3;
     padding: 40px 0px;
     width: 250px;
-    margin: 0 auto 160px;
+    margin: 170px auto 160px;
     box-shadow: 0 7px 0 #031c63;
 }
 
-.contact_btn:hover {
+.banner_btn:hover {
     transform: translateY(7px);
     box-shadow: none;
 }

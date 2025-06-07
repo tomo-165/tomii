@@ -41,7 +41,7 @@
 h2 {
     text-align: center;
     color: #00002d;
-    font-size: 38px;
+    font-size: 70px;
     font-family: ta-koigokoro, sans-serif;
     margin-top: 50px;
 }
@@ -49,7 +49,11 @@ h2 {
 .thanks {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+}
+
+.thanks p {
+    line-height: 2.2;
 }
 
 .plane {
@@ -61,6 +65,27 @@ h2 {
 .hand {
     width: 162px;
     margin: 0 160px 150px auto;
+}
+
+.thanks_btn p {
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    padding: 0 85px;
+}
+
+.thanks_btn {
+    border-radius: 45px;
+    background-color: #2845a3;
+    padding: 40px 0px;
+    width: 250px;
+    margin: 0 auto 160px;
+    box-shadow: 0 7px 0 #031c63;
+}
+
+.thanks_btn:hover {
+    transform: translateY(7px);
+    box-shadow: none;
 }
 
 
