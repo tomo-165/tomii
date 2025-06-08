@@ -60,10 +60,21 @@ h4 {
     height: 430px;
 }
 
-.mobile_sp {
+.sp {
     height: 300px;
     padding-left: 15px;
 }
+
+.ice,
+.burgerluxu {
+    height: 600px;
+}
+
+.burgerpop {
+    height: 400px;
+}
+
+
 
 
 /* 下部分 */
