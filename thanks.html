@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/thanks.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -27,7 +28,12 @@
 <body>
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/header.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/header_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/header.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -35,7 +41,20 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -68,7 +87,10 @@
 
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -78,11 +100,37 @@
         </div>
     </footer>
 
-    <div class="pagetop">
-        <a href="#header">
-            <img src="./images/top_button.png" alt="topへ">
-        </a>
-    </div>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                // これで矢印を隠せる
+            });
+
+            $('.photo').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+
+
+        })
+    </script>
+
 
 </body>
 

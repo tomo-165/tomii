@@ -39,9 +39,8 @@
 .theme {
     text-align: center;
     position: absolute;
-    top: 45%;
+    top: 37%;
     left: 20%;
-    /* width: 100%; */
     box-sizing: border-box;
 }
 
@@ -66,7 +65,7 @@
 }
 
 
-/* 共通 */
+/* 共通
 h2 {
     text-align: center;
     color: #031c63;
@@ -86,7 +85,7 @@ h2 {
 
 .plane_b {
     width: 110px;
-}
+} */
 
 /* 導入部分 */
 #intro p {
@@ -131,7 +130,23 @@ h2 {
 .more1 {
     font-size: 16px;
     text-align: right;
-    margin: 81px 138px 250px auto;
+    margin: 81px 138px 5px auto;
+}
+
+.yajirusi {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.yajirusi::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    border-right: 1px solid #bedaf6;
+    border-bottom: 1px solid #bedaf6;
+    transform: skew(45deg);
+    margin-bottom: 300px;
+    padding-right: 20px;
 }
 
 
@@ -240,6 +255,21 @@ h2 {
     margin-top: 86px;
 }
 
+.yajirusi2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.yajirusi2::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    border-right: 1px solid #bedaf6;
+    border-bottom: 1px solid #bedaf6;
+    transform: skew(45deg);
+    padding-right: 20px;
+}
+
 
 
 /* SKILL */
@@ -252,7 +282,7 @@ h2 {
     background-color: #f3fdff;
     width: 37%;
     height: 580px;
-    margin-bottom: 313px;
+    margin-bottom: 300px;
     box-shadow: inset 18px #ffffff;
 }
 
@@ -326,17 +356,39 @@ h2 {
     transform: scale(0.7, 0.7);
 }
 
-.contact_detail {
+.form {
+    max-width: 640px;
+    margin: 0 auto;
     text-align: left;
 }
 
-.send {
+.form_item {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.form_input {
+    margin: 15px 0 40px 0;
+}
+
+.form_label {
+    width: 90%;
+}
+
+.form_input {
+    width: 100%;
+    font-size: 18px;
+    border: solid 1px #bedaf6;
+}
+
+.form_submit {
     width: 210px;
     margin: 90px auto 66px auto;
 }
 
 
-/* フッター */
+/* フッター
 #footer {
     position: relative
 }
@@ -356,10 +408,10 @@ h2 {
     margin-top: 30px;
 }
 
-/* ページトップボタン */
+ページトップボタン
 .pagetop {
     position: fixed;
     right: 150px;
     bottom: 50px;
     width: 150px;
-}
+} */

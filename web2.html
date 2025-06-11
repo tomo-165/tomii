@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/bannerweb.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -27,7 +28,12 @@
 <body>
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/header.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/header_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/header.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -35,7 +41,20 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -45,41 +64,37 @@
         </div>
     </header>
 
-    <section id="WEB1" class="bannerweb">
+    <section id="WEB1">
         <h3>
             LIFE hairdesign
         </h3>
         <div class="bannerweb_img">
             <img class="workers" src="./images/hair_indi.png" alt="lifehairdesign">
         </div>
-        <ul>
-            <li>
-                <div class="box1">
-                    <h4>制作のポイント</h4>
-                    <p>
-                        コーポレートカラーのピンク色を基調に、上品で落ち着いた印象に仕上げました。美容室の全体やお店の雰囲気、人が感じられるサイトにしたいとのことで、メインビジュアルには、お店の様子を掲載し、SALON
-                        INFOの背景には、美容室を利用するお客様の笑顔の写真を使用しました。また、サイトを閲覧している途中でもすぐに予約できるようヘッダーを固定し、目立つように濃いピンク色を用いています。
-                    </p>
+        <div class="box">
+            <div class="box1">
+                <h4>制作のポイント</h4>
+                <p>
+                    コーポレートカラーのピンク色を基調に、上品で落ち着いた印象に仕上げました。美容室の全体やお店の雰囲気、人が感じられるサイトにしたいとのことで、メインビジュアルには、お店の様子を掲載し、SALON
+                    INFOの背景には、美容室を利用するお客様の笑顔の写真を使用しました。また、サイトを閲覧している途中でもすぐに予約できるようヘッダーを固定し、目立つように濃いピンク色を用いています。
+                </p>
+            </div>
+            <div class="box2">
+                <div>
+                    <h4>担当範囲</h4>
+                    <p>デザイン</p>
                 </div>
-            </li>
-            <li>
-                <div class="box2">
-                    <div>
-                        <h4>担当範囲</h4>
-                        <p>デザイン</p>
-                    </div>
-                    <div>
-                        <h4>使用ツール</h4>
-                        <p>Illustrator</p>
-                    </div>
-                    <div>
-                        <h4>制作期間</h4>
-                        <p>7日間</p>
-                    </div>
+                <div>
+                    <h4>使用ツール</h4>
+                    <p>Illustrator</p>
                 </div>
-            </li>
-        </ul>
-        <div class="sample">
+                <div>
+                    <h4>制作期間</h4>
+                    <p>7日間</p>
+                </div>
+            </div>
+        </div>
+        <div class="sample_hair">
             <img class="hair_pc" src="./images/hair_pc.jpg" alt="lifehairdesign_pc版">
 
         </div>
@@ -91,7 +106,10 @@
 
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -107,6 +125,36 @@
         </a>
     </div>
 
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                // これで矢印を隠せる
+            });
+
+            $('.photo').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+
+
+        })
+    </script>
 </body>
 
 </html>

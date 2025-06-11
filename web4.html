@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/bannerweb.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -27,7 +28,12 @@
 <body>
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/header.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/header_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/header.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -35,7 +41,20 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -45,39 +64,45 @@
         </div>
     </header>
 
-    <section id="WEB1" class="bannerweb">
+    <section id="WEB1">
         <h3>
             ポートフォリオ
         </h3>
         <div class="bannerweb_img">
             <img class="port" src="./images/port_indi.png" alt="ポートフォリオ">
         </div>
-        <ul>
-            <li>
-                <div class="box1">
-                    <h4>制作のポイント</h4>
-                    <p>
-                        依頼のあったお客様の立場に立ってデザインを考え、一緒に作り上げていくことをコンセプトとしています。一緒に作り上げたデザインを目的の方だけでなく様々な方に届けたい思いをひらひらと舞う紙飛行機に例え、当サイトでは紙飛行機をモチーフにデザインを考えました。
-                    </p>
+
+        <!-- sp版 -->
+        <div class="sp_choice">
+            <ul>
+                <li><a href="#sp_sample">pc版へ</a></li>
+                <li><a href="#xxxx">mobile版へ</a></li>
+            </ul>
+        </div>
+        <!-- ここまで -->
+
+        <div class="box">
+            <div class="box1">
+                <h4>制作のポイント</h4>
+                <p>
+                    依頼のあったお客様の立場に立ってデザインを考え、一緒に作り上げていくことをコンセプトとしています。一緒に作り上げたデザインを目的の方だけでなく様々な方に届けたい思いをひらひらと舞う紙飛行機に例え、当サイトでは紙飛行機をモチーフにデザインを考えました。
+                </p>
+            </div>
+            <div class="box2">
+                <div>
+                    <h4>担当範囲</h4>
+                    <p>デザイン/コーディング</p>
                 </div>
-            </li>
-            <li>
-                <div class="box2">
-                    <div>
-                        <h4>担当範囲</h4>
-                        <p>デザイン/コーディング</p>
-                    </div>
-                    <div>
-                        <h4>使用ツール</h4>
-                        <p>Illustrator/Photoshop<br>HTML/CSS/JavaScript/jQuery</p>
-                    </div>
-                    <div>
-                        <h4>制作期間</h4>
-                        <p>2か月</p>
-                    </div>
+                <div>
+                    <h4>使用ツール</h4>
+                    <p>Illustrator/Photoshop<br>HTML/CSS/JavaScript/jQuery</p>
                 </div>
-            </li>
-        </ul>
+                <div>
+                    <h4>制作期間</h4>
+                    <p>2か月</p>
+                </div>
+            </div>
+        </div>
         <div class="sample">
             <div class="cafe_pc">
                 <img src="./images/port_pc.jpg" alt="ポートフォリオ_pc">
@@ -86,6 +111,18 @@
                 <img src="./images/port_sp.jpg" alt="ポートフォリオ_sp">
             </div>
         </div>
+
+        <!-- sp版 -->
+        <div id="sp_sample">
+            <div class="sp_cafe_pc">
+                <div class="sp_inner">
+                    <div class="sp_pc-content">
+                        <img src="./images/port_pc.jpg" alt="ポートフォリオpc版">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ここまで -->
     </section>
 
     <div class="banner_btn">
@@ -94,7 +131,10 @@
 
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -109,6 +149,37 @@
             <img src="./images/top_button.png" alt="topへ">
         </a>
     </div>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                // これで矢印を隠せる
+            });
+
+            $('.photo').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+
+
+        })
+    </script>
 
 </body>
 

@@ -1,64 +1,7 @@
 @charset "utf-8";
 
-/* ヘッダー */
-#HEADER {
-    position: relative;
-}
-
-.header_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5% 3% 0 1.5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header_logo {
-    width: 150px;
-}
-
-.top_photo img {
-    width: 100%;
-}
-
-.pc_nav ul {
-    display: flex;
-    gap: 50px;
-}
-
-.pc_nav li {
-    color: white;
-    font-size: 16px;
-    font-weight: SemiCondensed;
-}
-
-
-/* 共通 */
 h2 {
-    text-align: center;
-    color: #031c63;
-    font-size: 32px;
-    font-family: acumin-variable, sans-serif;
     margin-top: 150px;
-}
-
-.title_img {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 94px;
-    padding-left: 80px;
-}
-
-.traj_b {
-    width: 250px;
-}
-
-.plane_b {
-    width: 110px;
 }
 
 h3 {
@@ -88,7 +31,6 @@ h3 {
 
 }
 
-
 /* バナー広告 */
 .banner1,
 .banner2,
@@ -103,34 +45,15 @@ h3 {
     height: 400px;
 }
 
-.banner1,
-.web1 {
-    margin: 0 100px 0 170px;
-}
-
-.banner2,
-.web2 {
-    margin-right: 170px;
-}
-
-.banner3,
-.web3 {
-    margin: 100px 100px 0 170px;
-}
-
-.banner4,
-.web4 {
-    margin: 100px 170px 0 0;
-}
-
-.banner_box1 ul,
-.banner_box2 ul,
-.web_box1 ul,
-.web_box2 ul {
+.banner_box1,
+.banner_box2,
+.web_box1,
+.web_box2 {
     display: flex;
     max-width: 1100px;
-    margin: 0 auto;
     justify-content: space-between;
+    margin: 100px auto 50px auto;
+    text-align: center;
 }
 
 .banner_box1 p,
@@ -139,27 +62,13 @@ h3 {
 .web_box2 p {
     text-align: center;
     font-size: 18px;
-    margin: 110px auto 0;
-}
-
-.banner_box2 p,
-.web_box2 p {
-    margin-bottom: 300px;
-}
-
-.banner_box1 img,
-.banner_box2 img,
-.web_box1 img,
-.web_box2 img {
-    width: 400x;
-    height: 300px;
+    margin: 105px auto 0px;
 }
 
 .work_btn p {
     color: #ffffff;
     font-size: 18px;
-    display: inline-block;
-    padding: 0 85px;
+    text-align: center;
 }
 
 .work_btn {
@@ -174,34 +83,4 @@ h3 {
 .work_btn:hover {
     transform: translateY(7px);
     box-shadow: none;
-}
-
-
-/* フッター */
-
-#FOOTER {
-    position: relative
-}
-
-#FOOTER img {
-    width: 100%;
-}
-
-.footer_wrap {
-    position: absolute;
-    top: 24%;
-    left: 45%;
-}
-
-.footer_wrap p {
-    color: white;
-    margin-top: 30px;
-}
-
-/* ページトップボタン */
-.pagetop {
-    position: fixed;
-    right: 150px;
-    bottom: 50px;
-    width: 150px;
 }

@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel=" stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
@@ -22,20 +23,27 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='https://tomo-165.github.io/tomii/thanks.html';}"></iframe>
 </head>
 
 <body>
-    <header id="header">
+    <header id="HEADER">
         <div class="top_photo">
             <img src="./images/top.jpg" alt="空の写真">
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
-                <img src="./images/logo.svg" alt="=ロゴマーク">
+                <a href="#HEADER">
+                    <img src="./images/logo.svg" alt="=ロゴマーク">
+                </a>
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -86,7 +94,10 @@
             <img src="./images/port_top.jpg">
         </div>
         <div>
-            <p class="more1"><a href="index_xx.html">一覧へ</a></p>
+            <p class="more1"><a href="works.html">一覧へ</a></p>
+        </div>
+        <div>
+            <p class="yajirusi"></p>
         </div>
     </section>
 
@@ -106,7 +117,8 @@
                 <p class="name"><span class="namecolor">と</span>みなが <span class="namecolor">と</span>もこ</p>
                 <p class="sentence">
                     東京都在住。<br>現在は、気象など自然を相手に仕事をしています。広報での業務や人の命を守るためにはどのような伝え方、見せ方をするのがよいかを考えている時にデザインに出合いました。</p>
-                <p class="more2"><a href="index_xx.html">もっと知りたい</a></p>
+                <p class="more2"><a href="about.html">もっと知りたい</a></p>
+                <p class="yajirusi2"></p>
             </div>
         </div>
     </section>
@@ -158,18 +170,37 @@
             制作のご相談やご依頼はこちらからお気軽にお問い合わせください。<br>
             お問い合わせいただいた内容を確認後、ご連絡いたします。
         </p>
-        <div class="contact_detail">
-            <p>お名前<span class="contactcolor">（必須）</span></p>
-            <p>メールアドレス<span class="contactcolor">（必須）</span></p>
-            <p>件名</p>
-            <p>お問い合わせ内容<span class="contactcolor">（必須）</span></p>
-        </div>
-        <div class="send">
+
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdYFG5sWPDONg5NS6D43Hgvllb0EY-XKZ3XbTd-i_GZlznLGg/viewform?usp=header"
+            method="POST" class="form" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form_item">
+                <label class="form_label" for="name">お名前<span class="contactcolor">（必須）</span></label>
+                <input class="form_input" type="text" id="name" name="entry.1060607497" required="required">
+            </div>
+            <div class="form_item">
+                <label class="form_label" for="email">メールアドレス<span class="contactcolor">（必須）</span></label>
+                <input class="form_input" type="email" id="email" name="entry.715618150" required="required">
+            </div>
+            <div class="form_item">
+                <label class="form_label" for="email">件名</label>
+                <input class="form_input" type="subject" id="subject" name="entry.245928875" required="required">
+            </div>
+            <div class="form_item">
+                <label class="form_label" for="message">お問い合わせ内容<span class="contactcolor">（必須）</span></label>
+                <textarea class="form_input" id="message" name="entry.1554282653" rows="5" required></textarea>
+            </div>
+            <div class="form_submit">
+                <button type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
+            </div>
+        </form>
+
+        <!-- <div class="send">
             <img src="./images/send.svg" alt="送信ボタン">
-        </div>
+        </div> -->
     </section>
 
-    <footer id="footer">
+    <footer id="FOOTER">
         <div>
             <img src="./images/futter.jpg" alt="空の写真">
         </div>
@@ -182,7 +213,7 @@
     </footer>
 
     <div class="pagetop">
-        <a href="#header">
+        <a href="#HEADER">
             <img src="./images/top_button.png" alt="topへ">
         </a>
     </div>

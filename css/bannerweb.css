@@ -1,46 +1,11 @@
 @charset "utf-8";
 
-/* ヘッダー */
-#HEADER {
-    position: relative;
-}
-
-.header_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5% 3% 0 1.5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.header_logo {
-    width: 150px;
-}
-
-.top_photo img {
-    width: 100%;
-}
-
-.pc_nav ul {
-    display: flex;
-    gap: 50px;
-}
-
-.pc_nav li {
-    color: white;
-    font-size: 16px;
-    font-weight: SemiCondensed;
-}
-
 /* バナー（デザスタmobile） */
 /* 上部分 */
 h3 {
     margin: 100px 0 60px 220px;
     color: #031c63;
+    font-size: 28px;
 }
 
 h4 {
@@ -52,6 +17,25 @@ h4 {
 .bannerweb_img {
     max-width: 890px;
     margin: 0 auto 100px;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    h3 {
+        margin: 80px auto 30px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .bannerweb_img {
+        max-width: 85%;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
 }
 
 /* 写真 */
@@ -75,26 +59,26 @@ h4 {
 }
 
 
-
-
 /* 下部分 */
-.bannerweb ul {
+.box {
     display: flex;
     max-width: 890px;
     margin: 0 auto;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.bannerweb p {
+.box p {
     color: #00002d;
     font-size: 16px;
     line-height: 1.7;
     margin-top: -18px;
-
 }
 
 .box1 {
     max-width: 580px;
+    padding-right: 20px;
 }
 
 .box2 {
@@ -103,12 +87,76 @@ h4 {
 
 /* webサイトの詳細部分 */
 .sample {
-    max-width: 740px;
-    margin: 0 auto 80px;
+    max-width: 750px;
     align-self: flex-start;
     display: flex;
     margin: 250px auto 100px;
     justify-content: space-between;
+}
+
+.sample_hair {
+    text-align: center;
+    margin: 250px auto 100px;
+}
+
+.sp_choice,
+.sp_sample {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .box {
+        flex-direction: column;
+        max-width: 85%;
+    }
+
+    .box p {
+        font-size: 13px;
+    }
+
+    .sample {
+        display: none;
+    }
+
+    .sp_choice {
+        margin: 0 auto 40px;
+    }
+
+    .sp_choice ul {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 13px;
+    }
+
+    #sp_sample {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: rgba(3, 28, 99, 0.8);
+    }
+
+    .sp_cafe_pc {
+        width: 300px;
+        height: 200px;
+        padding: 16px;
+        /* モーダルの内側のpadding */
+        background-color: rgba(3, 28, 99, 0.8);
+    }
+
+    .sp-inner {
+        height: 100%;
+        overflow: scroll;
+        /* スクロール設定 */
+    }
+
+    .sp_pc-content {
+        min-height: 600px;
+        background-color: lightblue;
+    }
 }
 
 
@@ -117,8 +165,7 @@ h4 {
 .banner_btn p {
     color: #ffffff;
     font-size: 18px;
-    display: inline-block;
-    padding: 0 85px;
+    text-align: center;
 }
 
 .banner_btn {
@@ -133,34 +180,4 @@ h4 {
 .banner_btn:hover {
     transform: translateY(7px);
     box-shadow: none;
-}
-
-
-/* フッター */
-
-#FOOTER {
-    position: relative
-}
-
-#FOOTER img {
-    width: 100%;
-}
-
-.footer_wrap {
-    position: absolute;
-    top: 24%;
-    left: 45%;
-}
-
-.footer_wrap p {
-    color: white;
-    margin-top: 30px;
-}
-
-/* ページトップボタン */
-.pagetop {
-    position: fixed;
-    right: 150px;
-    bottom: 50px;
-    width: 150px;
 }

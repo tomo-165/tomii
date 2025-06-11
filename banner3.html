@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/bannerweb.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -27,7 +28,12 @@
 <body>
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/header.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/header_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/header.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -35,7 +41,20 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -45,7 +64,7 @@
         </div>
     </header>
 
-    <section id="BANNER3" class="bannerweb">
+    <section id="BANNER3">
         <h3>
             デラックスバーガー（高級版）
         </h3>
@@ -53,45 +72,40 @@
             <img class="burgerluxu" src="./images/burgerluxu.jpg" alt="ハンバーガー（高級版）">
             <img class="sp" src="./images/burgerluxu_sp.jpg" alt="ハンバーガー（高級版）_sp版">
         </div>
-        <ul>
-            <li>
-                <div class="box1">
-                    <h4>制作のポイント</h4>
-                    <p>
-                        新商品のデラックスバーガーは、SNSを使う人に対して訴求することが目的とされています。デザインは、大学4年生の食べ盛りの男性で、かつ就職活動が終わりアルバイトをして生活費に比較的余裕のある方を対象としてデザインを考えました。<br>高級感のあるバナーデザインの制作となりますが、バーガーを見切らせることによってボリューミー感が増して表現できると考えました。また、余白を大きくすることや文字には金色のグラデーションを採用するなどして、高級感を表現しました。
-                    </p>
+        <div class="box">
+            <div class="box1">
+                <h4>制作のポイント</h4>
+                <p>
+                    新商品のデラックスバーガーは、SNSを使う人に対して訴求することが目的とされています。デザインは、大学4年生の食べ盛りの男性で、かつ就職活動が終わりアルバイトをして生活費に比較的余裕のある方を対象としてデザインを考えました。<br>高級感のあるバナーデザインの制作となりますが、バーガーを見切らせることによってボリューミー感が増して表現できると考えました。また、余白を大きくすることや文字には金色のグラデーションを採用するなどして、高級感を表現しました。
+                </p>
+            </div>
+            <div class="box2">
+                <div>
+                    <h4>担当範囲</h4>
+                    <p>デザイン</p>
                 </div>
-            </li>
-            <li>
-                <div class="box2">
-                    <div>
-                        <h4>担当範囲</h4>
-                        <p>デザイン</p>
-                    </div>
-                    <div>
-                        <h4>使用ツール</h4>
-                        <p>Illustrator/Photoshop</p>
-                    </div>
-                    <div>
-                        <h4>制作期間</h4>
-                        <p>5日間</p>
-                    </div>
+                <div>
+                    <h4>使用ツール</h4>
+                    <p>Illustrator/Photoshop</p>
                 </div>
-            </li>
-        </ul>
+                <div>
+                    <h4>制作期間</h4>
+                    <p>5日間</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="banner_btn">
         <p>一覧へ</p>
     </div>
 
-
-
-
-
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -106,6 +120,37 @@
             <img src="./images/top_button.png" alt="topへ">
         </a>
     </div>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+                // これで矢印を隠せる
+            });
+
+            $('.photo').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+
+
+        })
+    </script>
 
 </body>
 
