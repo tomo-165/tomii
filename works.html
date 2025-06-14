@@ -13,22 +13,17 @@
     <link rel="stylesheet" href="./css/works.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'rvv1cym',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
 </head>
 
 <body>
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/header.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/header_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/header.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -36,7 +31,20 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
                     <li><a href="#ABOUTME">ABOUT</a></li>
                     <li><a href="#SKILL">SKILL</a></li>
@@ -136,7 +144,10 @@
 
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -151,6 +162,17 @@
             <img src="./images/top_button.png" alt="topへ">
         </a>
     </div>
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
 </body>
 

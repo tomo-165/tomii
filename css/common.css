@@ -161,7 +161,7 @@ h2 {
 @media screen and (max-width: 767px) {
     h2 {
         font-size: 20px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .traj_b {
@@ -171,12 +171,16 @@ h2 {
     .plane_b {
         width: 68px;
     }
+
+    .title_img {
+        margin-bottom: 50px;
+    }
 }
 
 
 /* フッター */
 #FOOTER {
-    position: relative
+    position: relative;
 }
 
 #FOOTER img {
@@ -195,18 +199,20 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
-    .footer_wrap {
-        margin: 0 auto;
-    }
 
-    .foooter_wrap p {
+    .footer_wrap p {
         font-size: 12px;
         padding-bottom: 30px;
     }
 
-    .footer_logo {
-        padding-left: 0;
+    .footer_wrap h1 {
+        width: 90px;
     }
+
+    .footer_wrap {
+        margin: 0 auto;
+    }
+
 }
 
 /* ページトップボタン */
@@ -215,4 +221,12 @@ h2 {
     right: 50px;
     bottom: 50px;
     width: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .pagetop {
+        right: 10px;
+        bottom: 50px;
+        width: 80px;
+    }
 }

@@ -84,9 +84,10 @@ h2 {
     }
 
     .thanks_btn {
-        border-radius: 45px;
+        border-radius: 27px;
+        padding: 20px 0px;
         width: 150px;
-        /* margin: 0 auto 160px; */
-        /* box-shadow: 0 7px 0 #031c63; */
+        margin: 0 auto 70px;
+        box-shadow: 0 5px 0 #031c63;
     }
 }

@@ -53,6 +53,50 @@ h2 {
     line-height: 1.4;
 }
 
+@media screen and (max-width: 767px) {
+    h2 {
+        margin-top: 70px;
+    }
+
+    .sentence_group {
+        display: contents;
+    }
+
+    .about_group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 120px;
+    }
+
+    .aboutme {
+        order: 1;
+        width: 300px;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .name {
+        order: 2;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+
+    .sentence {
+        order: 3;
+        padding-left: 10px;
+    }
+
+    .more2 {
+        order: 4;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .sentence p {
+        font-size: 14px;
+    }
+}
+
 
 /* CONTACT */
 
@@ -84,4 +128,27 @@ h2 {
 .contact_btn:hover {
     transform: translateY(7px);
     box-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sp_br {
+        display: block;
+    }
+
+    .contact_lang {
+        font-size: 14px;
+    }
+
+    .contact_btn p {
+        font-size: 12px;
+    }
+
+    .contact_btn {
+        border-radius: 27px;
+        padding: 20px 0px;
+        width: 150px;
+        margin: 0 auto 70px;
+        box-shadow: 0 5px 0 #031c63;
+    }
+
 }

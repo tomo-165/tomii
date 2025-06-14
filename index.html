@@ -13,35 +13,37 @@
     <link rel=" stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'rvv1cym',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-    <script type="text/javascript">
-        let submitted = false;
-    </script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted){window.location='https://tomo-165.github.io/tomii/thanks.html';}"></iframe>
 </head>
 
 <body>
+    <!-- ヘッダー -->
     <header id="HEADER">
         <div class="top_photo">
-            <img src="./images/top.jpg" alt="空の写真">
+            <div>
+                <picture>
+                    <source srcset="./images/headertop_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/top.jpg" alt="空の写真">
+                </picture>
+            </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
-                <a href="#HEADER">
-                    <img src="./images/logo.svg" alt="=ロゴマーク">
-                </a>
+                <img src="./images/logo.svg" alt="=ロゴマーク">
             </h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#HEADER">HOME</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#ABOUTME">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#HEADER">HOME</a></li>
                     <li><a href="#WORKS">WORKS</a></li>
@@ -53,13 +55,14 @@
         </div>
 
         <div class="theme">
-            <h2>あなたによりそったデザインを</h2>
+            <h2>あなたによりそった<br class="sp_br">デザインを</h2>
             <div class="theme_img">
                 <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
                 <img class="top_plane" src="./images/top_plane.svg" alt="紙飛行機">
             </div>
     </header>
 
+    <!-- 導入部分 -->
     <section id="intro">
         <div class="plane">
             <img src="./images/plane_b.svg" alt="紙飛行機">
@@ -67,14 +70,14 @@
         <h2>
             ～紙飛行機のように～
         </h2>
-        <p>お客様の立場に立ってデザインを考え、一緒に作り上げていきます</p><br>
-        <p>紙飛行機がひらひらと舞って手元に届くように</p><br>
-        <p>一緒に作り上げた作品をたくさんの方に届けたい</p>
+        <p>お客様の立場に立ってデザインを考え、<br class="sp_br1">一緒に作り上げていきます<br>紙飛行機がひらひらと舞って<br
+                class="sp_br1">手元に届くように<br>一緒に作り上げた作品を<br class="sp_br1">たくさんの方に届けたい</p>
         <div class="hand">
             <img src="./images/hand.svg" alt="手">
         </div>
     </section>
 
+    <!-- WORKS -->
     <section id="WORKS">
         <h2>
             WORKS
@@ -93,14 +96,12 @@
             <img src="./images/cafe_top.jpg">
             <img src="./images/port_top.jpg">
         </div>
-        <div>
-            <p class="more1"><a href="works.html">一覧へ</a></p>
-        </div>
-        <div>
-            <p class="yajirusi"></p>
+        <div class="more">
+            <p class="more1 yajirusi"><a href="works.html">一覧へ</a></p>
         </div>
     </section>
 
+    <!-- ABOUTME -->
     <section id="ABOUTME">
         <h2>
             ABOUT ME
@@ -117,12 +118,12 @@
                 <p class="name"><span class="namecolor">と</span>みなが <span class="namecolor">と</span>もこ</p>
                 <p class="sentence">
                     東京都在住。<br>現在は、気象など自然を相手に仕事をしています。広報での業務や人の命を守るためにはどのような伝え方、見せ方をするのがよいかを考えている時にデザインに出合いました。</p>
-                <p class="more2"><a href="about.html">もっと知りたい</a></p>
-                <p class="yajirusi2"></p>
+                <p class="more2 yajirusi2"><a href="about.html">もっと知りたい</a></p>
             </div>
         </div>
     </section>
 
+    <!-- SKILL -->
     <section id="SKILL">
         <h2>
             SKILL
@@ -157,6 +158,7 @@
         </ul>
     </section>
 
+    <!-- CONTACT -->
     <section id="CONTACT">
         <h2>
             CONTACT
@@ -167,12 +169,12 @@
         </div>
         <p class="contact_lang">
             当サイトをご覧いただきありがとうございます。<br>
-            制作のご相談やご依頼はこちらからお気軽にお問い合わせください。<br>
-            お問い合わせいただいた内容を確認後、ご連絡いたします。
+            制作のご相談やご依頼は<br class="sp_br2">こちらからお気軽にお問い合わせください。<br>
+            お問い合わせいただいた内容を確認後、<br class="sp_br2">ご連絡いたします。
         </p>
 
         <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdYFG5sWPDONg5NS6D43Hgvllb0EY-XKZ3XbTd-i_GZlznLGg/viewform?usp=header"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYFG5sWPDONg5NS6D43Hgvllb0EY-XKZ3XbTd-i_GZlznLGg/formResponse"
             method="POST" class="form" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="form_item">
                 <label class="form_label" for="name">お名前<span class="contactcolor">（必須）</span></label>
@@ -194,15 +196,15 @@
                 <button type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
             </div>
         </form>
-
-        <!-- <div class="send">
-            <img src="./images/send.svg" alt="送信ボタン">
-        </div> -->
     </section>
 
+    <!-- フッター -->
     <footer id="FOOTER">
         <div>
-            <img src="./images/futter.jpg" alt="空の写真">
+            <picture>
+                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                <img src="./images/futter.jpg" alt="空の写真">
+            </picture>
         </div>
         <div class="footer_wrap">
             <h1 class="header_logo">
@@ -212,6 +214,7 @@
         </div>
     </footer>
 
+    <!-- TOPへ -->
     <div class="pagetop">
         <a href="#HEADER">
             <img src="./images/top_button.png" alt="topへ">
@@ -220,8 +223,34 @@
 
     <script>
         $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+        })
+    </script>
+
+    <script>
+            (function (d) {
+                var config = {
+                    kitId: 'rvv1cym',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                    h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+            })(document);
+    </script>
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
+
+    <script>
+        $(function () {
             $('.WORKS_photo').slick({
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 2000,
                 // dots: true,
                 centerMode: true,
@@ -229,20 +258,11 @@
                 slidesToShow: 3,
                 responsive: [
                     {
-                        breakpoint: 768,
+                        breakpoint: 767,
                         settings: {
                             arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '50px',
                             slidesToShow: 1
                         }
                     }
