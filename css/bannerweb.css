@@ -69,6 +69,14 @@ h4 {
 }
 
 
+@media screen and (max-width: 767px) {
+
+    .banner_img sp {
+        display: none;
+    }
+}
+
+
 /* 下部分 */
 .box {
     display: flex;
@@ -149,7 +157,7 @@ h4 {
         background-color: rgba(3, 28, 99, 0.8);
     }
 
-    .sp_cafe_pc {
+    .sp_port_pc {
         width: 300px;
         height: 200px;
         padding: 16px;
@@ -190,4 +198,19 @@ h4 {
 .banner_btn:hover {
     transform: translateY(7px);
     box-shadow: none;
+}
+
+
+@media screen and (max-width: 767px) {
+    .banner_btn p {
+        font-size: 12px;
+    }
+
+    .banner_btn {
+        border-radius: 27px;
+        padding: 20px 0px;
+        width: 150px;
+        margin: 150px auto 70px;
+        box-shadow: 0 5px 0 #031c63;
+    }
 }

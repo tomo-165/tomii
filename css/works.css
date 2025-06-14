@@ -121,4 +121,51 @@ h3 {
 }
 
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+
+    .banner_box1,
+    .banner_box2,
+    .web_box1,
+    .web_box2 {
+        flex-direction: column;
+        max-width: 330px;
+        /* justify-content: space-between; */
+        margin: 0 auto;
+        /* text-align: center; */
+    }
+
+    .banner1,
+    .banner2,
+    .banner3,
+    .banner4,
+    .web1,
+    .web2,
+    .web3,
+    .web4 {
+        width: 330px;
+        height: 264px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 70px;
+    }
+
+    .banner_box1 p,
+    .banner_box2 p,
+    .web_box1 p,
+    .web_box2 p {
+        font-size: 16px;
+    }
+
+    .work_btn p {
+        font-size: 12px;
+    }
+
+    .work_btn {
+        border-radius: 27px;
+        padding: 20px 0px;
+        width: 150px;
+        margin: 150px auto 70px;
+        box-shadow: 0 5px 0 #031c63;
+    }
+
+}
