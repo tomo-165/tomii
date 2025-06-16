@@ -99,6 +99,12 @@
     }
 }
 
+@media screen and (max-width: 370px) {
+    .theme h2 {
+        font-size: 30px;
+    }
+}
+
 
 /* 導入部分 */
 #intro p {
@@ -251,12 +257,12 @@
     } */
 
     .slick-next:before {
-        border-top: 2px solid #000000;
+        border-top: 2px solid #bedaf6;
         border-right: 2px solid #bedaf6;
     }
 
     .slick-prev:before {
-        border-top: 2px solid #000000;
+        border-top: 2px solid #bedaf6;
         border-left: 2px solid #bedaf6;
     }
 
@@ -281,7 +287,6 @@
 
 .aboutme {
     width: 350px;
-    padding-left: 10px;
 }
 
 .sentence_group {
@@ -335,6 +340,11 @@
 
     .aboutme {
         text-align: center;
+        width: 100%;
+    }
+
+    .aboutme img {
+        max-width: 245px;
     }
 
     .name {
@@ -344,7 +354,9 @@
     }
 
     .sentence_group {
-        width: 73%;
+        max-width: 280px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .sentence {
@@ -498,7 +510,18 @@
 
 .form_submit img {
     width: 210px;
-    margin: 90px auto 66px auto;
+    margin: 30px auto 90px;
+}
+
+.custom_button {
+    padding-block: 0;
+    padding-inline: 0;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.form_submit {
+    text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -512,11 +535,19 @@
     }
 
     .form {
-        max-width: 330px;
+        max-width: 320px;
         margin: 0 auto;
+        padding-left: 5px;
     }
 
     .form_label {
         font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .form_input {
+        width: 90%;
+        font-size: 16px;
     }
 }

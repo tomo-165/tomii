@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-/* バナー（デザスタmobile） */
 /* 上部分 */
 h3 {
     /* margin: 100px 0 60px 220px; */
@@ -17,19 +16,6 @@ h4 {
     border-bottom: 1px solid #bedaf6;
 }
 
-.bannerweb_img {
-    max-width: 890px;
-    /* width: 65%; */
-    margin: 0 auto 100px;
-    text-align: center;
-}
-
-@media screen and (max-width: 1185px) {
-    .banner_img img {
-        max-width: 595px;
-    }
-}
-
 @media screen and (max-width: 767px) {
     h3 {
         margin: 80px auto 30px;
@@ -39,17 +25,20 @@ h4 {
 
     h4 {
         font-size: 16px;
-    }
-
-    .bannerweb_img {
-        max-width: 85%;
-        margin-top: 80px;
-        margin-bottom: 50px;
+        max-width: 300px;
     }
 }
 
 /* 写真 */
 /* バナー */
+
+.bannerweb_img {
+    max-width: 890px;
+    /* width: 65%; */
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
 .mobile {
     height: 430px;
 }
@@ -61,18 +50,38 @@ h4 {
 
 .ice,
 .burgerluxu {
-    height: 600px;
+    height: 500px;
 }
 
 .burgerpop {
     height: 400px;
 }
 
+@media screen and (max-width: 900px) {
+    .burgerpop {
+        height: 300px;
+    }
+}
 
 @media screen and (max-width: 767px) {
 
-    .banner_img sp {
+    .bannerweb_img {
+        /* max-width: 100%; */
+        margin: 80px auto 50px;
+        max-width: 310px;
+        width: 100%;
+    }
+
+    .sp {
         display: none;
+    }
+
+    .mobile,
+    .ice,
+    .burgerluxu,
+    .burgerpop {
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -110,6 +119,8 @@ h4 {
     display: flex;
     margin: 250px auto 100px;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .sample_hair {
@@ -118,14 +129,21 @@ h4 {
 }
 
 .sp_choice,
-.sp_sample {
+#sp_sample {
     display: none;
 }
 
 @media screen and (max-width: 767px) {
     .box {
         flex-direction: column;
-        max-width: 85%;
+        max-width: 300px;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .box1 {
+        padding-right: 0;
     }
 
     .box p {
@@ -137,16 +155,46 @@ h4 {
     }
 
     .sp_choice {
-        margin: 0 auto 40px;
+        display: block;
+        margin: 0 auto 80px;
+    }
+
+    .pc_modal,
+    .sp_modal {
+        padding-block: 0;
+        padding-inline: 0;
+        border-width: 0;
+        background-color: transparent;
+        color: #00002d;
     }
 
     .sp_choice ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         font-size: 13px;
     }
 
-    #sp_sample {
+    .yajirusi1,
+    .yajirusi2 {
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+    }
+
+    .yajirusi1::after,
+    .yajirusi2::after {
+        display: block;
+        content: '';
+        width: 100px;
+        height: 10px;
+        border-right: 1px solid #bedaf6;
+        border-bottom: 1px solid #bedaf6;
+        transform: skew(45deg);
+        padding-right: 20px;
+    }
+
+    #sp_sample1,
+    #sp_sample2 {
         position: fixed;
         inset: 0;
         margin: auto;
@@ -155,14 +203,17 @@ h4 {
         align-items: center;
         z-index: 1;
         background-color: rgba(3, 28, 99, 0.8);
+        padding: 16px;
+        display: none;
     }
 
     .sp_port_pc {
-        width: 300px;
-        height: 200px;
-        padding: 16px;
-        /* モーダルの内側のpadding */
-        background-color: rgba(3, 28, 99, 0.8);
+        max-width: 300px;
+        margin: 0 auto;
+        height: 100%;
+        /* 親要素と同じ高さ */
+        overflow-y: scroll;
+        /* 画像のスクロール */
     }
 
     .sp-inner {
@@ -173,7 +224,84 @@ h4 {
 
     .sp_pc-content {
         min-height: 600px;
-        background-color: lightblue;
+    }
+
+    .sp_port_mobile {
+        max-width: 300px;
+        margin: 0 auto;
+        height: 100%;
+        /* 親要素と同じ高さ */
+        overflow-y: scroll;
+        /* 画像のスクロール */
+    }
+
+    .sp_mobile-content {
+        min-height: 600px;
+        text-align: center;
+    }
+
+
+    /* モーダルのバツ印 */
+    /* .modal_close {
+        background-color: transparent;
+    } */
+    .modal_close {
+        display: block;
+        height: 21px;
+        /* 位置の調整 */
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        /* 重なり具合 */
+        z-index: 2;
+    }
+
+    .modal_close span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 1px;
+        background: #fff;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .modal_close span::before,
+    .modal_close span::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 1px;
+        background: #fff;
+        /* 位置の調整 */
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .modal_close span::before {
+        bottom: 10px;
+    }
+
+    .modal_close span::after {
+        top: 10px;
+    }
+
+    .modal_close span {
+        background-color: transparent;
+    }
+
+    .modal_close span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .modal_close span::after {
+        top: 0;
+        transform: rotate(-45deg);
     }
 }
 

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5% 3% 0 1.5%;
+    padding: 0.5% 3% 0 2.5%;
     position: absolute;
     top: 0;
     left: 0;
@@ -46,6 +46,15 @@
     .pc_nav {
         display: none;
     }
+
+    .header_wrap {
+        padding: 2.5% 3% 0 2.5%;
+    }
+
+    /* .top_photo img {
+        width: 100%;
+        height: 100px;
+    } */
 
     .sp_btn {
         display: block;
@@ -134,7 +143,6 @@
     }
 }
 
-
 /* 共通 */
 h2 {
     text-align: center;
@@ -169,7 +177,7 @@ h2 {
     }
 
     .plane_b {
-        width: 68px;
+        width: 65px;
     }
 
     .title_img {
@@ -183,19 +191,29 @@ h2 {
     position: relative;
 }
 
-#FOOTER img {
+.back_photo picture img {
     width: 100%;
 }
 
 .footer_wrap {
     position: absolute;
     top: 24%;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer_wrap p {
     color: white;
-    margin-top: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.footer_wrap .footer_logo {
+    margin: 0 auto;
+}
+
+.footer_logo {
+    width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -211,6 +229,10 @@ h2 {
 
     .footer_wrap {
         margin: 0 auto;
+    }
+
+    .back_photo {
+        height: 100%;
     }
 
 }

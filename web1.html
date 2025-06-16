@@ -13,16 +13,6 @@
     <link rel="stylesheet" href="./css/bannerweb.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'rvv1cym',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
 </head>
 
 <body>
@@ -71,6 +61,16 @@
         <div class="bannerweb_img">
             <img class="workers" src="./images/workers_indi.png" alt="WORKERS">
         </div>
+
+        <!-- sp版 -->
+        <div class="sp_choice">
+            <ul>
+                <li><button class="pc_modal yajirusi1">pc版へ</button></li>
+                <li><button class="sp_modal yajirusi2">mobile版へ</button></li>
+            </ul>
+        </div>
+        <!-- ここまで -->
+
         <div class="box">
             <div class="box1">
                 <h4>制作のポイント</h4>
@@ -101,26 +101,57 @@
                 <img src="./images/workers_sp.jpg" alt="WORKERS">
             </div>
         </div>
+
+        <!-- sp版 -->
+        <div id="sp_sample1">
+            <div class="modal_close">
+                <span></span>
+            </div>
+            <div class="sp_port_pc">
+                <div class="sp_inner">
+                    <div class="sp_pc-content">
+                        <img src="./images/workers_pc.jpg" alt="workers_pc版">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sp_sample2">
+            <div class="modal_close">
+                <span></span>
+            </div>
+            <div class="sp_port_mobile">
+                <div class="sp_inner">
+                    <div class="sp_mobile-content">
+                        <img src="./images/workers_sp.jpg" alt="workers_sp版">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ここまで -->
+
     </section>
 
     <div class="banner_btn">
         <p>一覧へ</p>
     </div>
 
+    <!-- フッター -->
     <footer id="FOOTER">
-        <div>
+        <div class="back_photo">
             <picture>
                 <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
                 <img src="./images/futter.jpg" alt="空の写真">
             </picture>
         </div>
         <div class="footer_wrap">
-            <h1 class="header_logo">
+            <h1 class="footer_logo">
                 <img src="./images/logo.svg" alt="=ロゴマーク">
             </h1>
             <p>©tomii design 2025</p>
         </div>
     </footer>
+
+
     <div class="pagetop">
         <a href="#header">
             <img src="./images/top_button.png" alt="topへ">
@@ -128,33 +159,41 @@
     </div>
 
     <script>
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+    <script>
         $(function () {
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
-                $('.sp_btn').toggleClass('open');
+                $('.sp_btn').toggleClass('open')
             })
 
-            $('.header_slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                arrows: false,
-                // これで矢印を隠せる
-            });
+            $('.pc_modal').on('click', function () {
+                $('#sp_sample1').fadeIn();
+                $('.sp_btn').fadeOut();
+                $('html,body').css('overflow', 'hidden')
+            })
 
-            $('.photo').slick({
-                infinite: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                responsive: [{
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
+            $('.sp_modal').on('click', function () {
+                $('#sp_sample2').fadeIn();
+                $('.sp_btn').fadeOut();
+                $('html,body').css('overflow', 'hidden')
+            })
 
-
+            $('.modal_close').on('click', function () {
+                $('#sp_sample1').fadeOut();
+                $('#sp_sample2').fadeOut();
+                $('html,body').removeAttr('style');
+                $('.sp_btn').fadeIn();
+            })
         })
     </script>
 

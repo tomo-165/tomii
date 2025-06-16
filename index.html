@@ -87,14 +87,14 @@
             <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
         </div>
         <div class="WORKS_photo">
-            <img src="./images/ice_top.jpg">
-            <img src="./images/burgerluxu_top.jpg">
-            <img src="./images/burgerpop_top.jpg">
-            <img src="./images/mobile_top.jpg">
-            <img src="./images/workers_top.jpg">
-            <img src="./images/hair_top.jpg">
-            <img src="./images/cafe_top.jpg">
-            <img src="./images/port_top.jpg">
+            <img src="./images/ice_top_sp.jpg">
+            <img src="./images/burgerluxu_top _sp.jpg">
+            <img src="./images/burgerpop_top_sp.jpg">
+            <img src="./images/mobile_top_sp.jpg">
+            <img src="./images/workers_top_sp.jpg">
+            <img src="./images/hair_top_sp.jpg">
+            <img src="./images/cafe_top_sp.jpg">
+            <img src="./images/port_top_sp.jpg">
         </div>
         <div class="more">
             <p class="more1 yajirusi"><a href="works.html">一覧へ</a></p>
@@ -185,29 +185,29 @@
                 <input class="form_input" type="email" id="email" name="entry.715618150" required="required">
             </div>
             <div class="form_item">
-                <label class="form_label" for="email">件名</label>
-                <input class="form_input" type="subject" id="subject" name="entry.245928875" required="required">
+                <label class="form_label" for="subject">件名</label>
+                <input class="form_input" type="text" id="subject" name="entry.245928875" required="required">
             </div>
             <div class="form_item">
                 <label class="form_label" for="message">お問い合わせ内容<span class="contactcolor">（必須）</span></label>
                 <textarea class="form_input" id="message" name="entry.1554282653" rows="5" required></textarea>
             </div>
             <div class="form_submit">
-                <button type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
+                <button class="custom_button" type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
             </div>
         </form>
     </section>
 
     <!-- フッター -->
     <footer id="FOOTER">
-        <div>
+        <div class="back_photo">
             <picture>
                 <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
                 <img src="./images/futter.jpg" alt="空の写真">
             </picture>
         </div>
         <div class="footer_wrap">
-            <h1 class="header_logo">
+            <h1 class="footer_logo">
                 <img src="./images/logo.svg" alt="=ロゴマーク">
             </h1>
             <p>©tomii design 2025</p>
@@ -260,7 +260,7 @@
                     {
                         breakpoint: 767,
                         settings: {
-                            arrows: false,
+                            // arrows: true,
                             centerMode: true,
                             centerPadding: '50px',
                             slidesToShow: 1

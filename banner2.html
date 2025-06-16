@@ -13,16 +13,6 @@
     <link rel="stylesheet" href="./css/bannerweb.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'rvv1cym',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
 </head>
 
 <body>
@@ -100,15 +90,16 @@
         <p>一覧へ</p>
     </div>
 
+    <!-- フッター -->
     <footer id="FOOTER">
-        <div>
+        <div class="back_photo">
             <picture>
                 <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
                 <img src="./images/futter.jpg" alt="空の写真">
             </picture>
         </div>
         <div class="footer_wrap">
-            <h1 class="header_logo">
+            <h1 class="footer_logo">
                 <img src="./images/logo.svg" alt="=ロゴマーク">
             </h1>
             <p>©tomii design 2025</p>
@@ -120,6 +111,17 @@
             <img src="./images/top_button.png" alt="topへ">
         </a>
     </div>
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
     <script>
         $(function () {
@@ -135,20 +137,6 @@
                 arrows: false,
                 // これで矢印を隠せる
             });
-
-            $('.photo').slick({
-                infinite: true,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                responsive: [{
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
-
-
         })
     </script>
 

@@ -72,24 +72,36 @@ h2 {
         order: 1;
         width: 300px;
         margin: 0 auto;
-        padding-right: 0;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
     .name {
         order: 2;
-        padding-left: 10px;
         font-size: 16px;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
     }
 
     .sentence {
         order: 3;
-        padding-left: 10px;
+        /* padding-left: 10px; */
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .more2 {
         order: 4;
-        padding-left: 10px;
+        /* padding-left: 10px; */
         font-size: 13px;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 30px;
     }
 
     .sentence p {
