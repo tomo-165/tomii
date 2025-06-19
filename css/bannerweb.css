@@ -106,10 +106,12 @@ h4 {
 .box1 {
     max-width: 580px;
     padding-right: 20px;
+    width: 65%;
 }
 
 .box2 {
     max-width: 280px;
+    width: 30%
 }
 
 /* webサイトの詳細部分 */
@@ -123,13 +125,18 @@ h4 {
     padding-right: 10px;
 }
 
-.sample_hair {
+/* .sample_hair {
     text-align: center;
     margin: 250px auto 100px;
+} */
+
+.hair_pc {
+    margin: 0 auto;
 }
 
 .sp_choice,
-#sp_sample {
+#sp_sample1,
+#sp_sample2 {
     display: none;
 }
 
@@ -144,6 +151,11 @@ h4 {
 
     .box1 {
         padding-right: 0;
+        width: 100%;
+    }
+
+    .box2 {
+        width: 100%;
     }
 
     .box p {

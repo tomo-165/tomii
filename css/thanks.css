@@ -54,13 +54,8 @@ h2 {
 
     /* thanksの箇所 */
     h2 {
-        font-size: 35px;
+        font-size: 50px;
     }
-
-    /* .thanks {
-        
-        /* margin-bottom: 100px; */
-
 
     .thanks p {
         font-size: 14px;
@@ -69,14 +64,11 @@ h2 {
     }
 
     .plane {
-        width: 60px;
-        /* margin-top: 100px;
-        margin-left: 17%; */
+        width: 70px;
     }
 
     .hand {
-        width: 75px;
-        /* margin: 0 12% 100px auto; */
+        width: 90px;
     }
 
     .thanks_btn p {
@@ -89,5 +81,19 @@ h2 {
         width: 150px;
         margin: 0 auto 70px;
         box-shadow: 0 5px 0 #031c63;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 35px;
+    }
+
+    .plane {
+        width: 60px;
+    }
+
+    .hand {
+        width: 70px;
     }
 }

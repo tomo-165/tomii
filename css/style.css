@@ -543,6 +543,11 @@
     .form_label {
         font-size: 13px;
     }
+
+    .form_submit img {
+        width: 150px;
+        margin: 30px auto 90px;
+    }
 }
 
 @media screen and (max-width: 355px) {
