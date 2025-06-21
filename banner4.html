@@ -32,8 +32,8 @@
             <nav class="pc_nav">
                 <ul>
                     <li><a href="./index.html#HEADER">HOME</a></li>
-                    <li><a href="./index.html#WORKS">WORKS</a></li>
-                    <li><a href="./index.html#ABOUTME">ABOUT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./index.html#SKILL">SKILL</a></li>
                     <li><a href="./index.html#CONTACT">CONTACT</a></li>
                 </ul>
@@ -45,8 +45,8 @@
             <nav class="sp_nav">
                 <ul>
                     <li><a href="./index.html#HEADER">HOME</a></li>
-                    <li><a href="./index.html#WORKS">WORKS</a></li>
-                    <li><a href="./index.html#ABOUTME">ABOUT</a></li>
+                    <li><a href="./works.html">WORKS</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="./index.html#SKILL">SKILL</a></li>
                     <li><a href="./index.html#CONTACT">CONTACT</a></li>
                 </ul>
@@ -130,6 +130,12 @@
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+                $('html,body').css('overflow', 'hidden')
+            })
+
+            $('.sp_nav li').on('click', function () {
+                $('.sp_nav').fadeOut();
+                $('.sp_btn').toggleClass('open')
             })
 
             $('.header_slider').slick({
@@ -138,6 +144,17 @@
                 dots: true,
                 arrows: false,
                 // これで矢印を隠せる
+            });
+        })
+
+        $(function () {
+            $(window).scroll(function () {
+                var scrollPosition = $(window).scrollTop();
+                if (scrollPosition >= 400) {
+                    $(".pagetop").css("opacity", "1");
+                } else {
+                    $(".pagetop").css("opacity", "0");
+                }
             });
         })
     </script>

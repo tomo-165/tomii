@@ -25,7 +25,7 @@ h4 {
 
     h4 {
         font-size: 16px;
-        max-width: 300px;
+        max-width: 500px;
     }
 }
 
@@ -125,11 +125,6 @@ h4 {
     padding-right: 10px;
 }
 
-/* .sample_hair {
-    text-align: center;
-    margin: 250px auto 100px;
-} */
-
 .hair_pc {
     margin: 0 auto;
 }
@@ -143,10 +138,11 @@ h4 {
 @media screen and (max-width: 767px) {
     .box {
         flex-direction: column;
-        max-width: 300px;
+        max-width: 500px;
         width: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
 
     .box1 {
@@ -156,6 +152,7 @@ h4 {
 
     .box2 {
         width: 100%;
+        max-width: 500px;
     }
 
     .box p {
@@ -254,9 +251,6 @@ h4 {
 
 
     /* モーダルのバツ印 */
-    /* .modal_close {
-        background-color: transparent;
-    } */
     .modal_close {
         display: block;
         height: 21px;
@@ -324,12 +318,12 @@ h4 {
     color: #ffffff;
     font-size: 18px;
     text-align: center;
+    padding: 40px 0px;
 }
 
 .banner_btn {
     border-radius: 45px;
     background-color: #2845a3;
-    padding: 40px 0px;
     width: 250px;
     margin: 170px auto 160px;
     box-shadow: 0 7px 0 #031c63;
@@ -344,11 +338,11 @@ h4 {
 @media screen and (max-width: 767px) {
     .banner_btn p {
         font-size: 12px;
+        padding: 20px 0px;
     }
 
     .banner_btn {
         border-radius: 27px;
-        padding: 20px 0px;
         width: 150px;
         margin: 150px auto 70px;
         box-shadow: 0 5px 0 #031c63;

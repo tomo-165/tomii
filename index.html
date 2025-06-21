@@ -60,6 +60,13 @@
                 <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
                 <img class="top_plane" src="./images/top_plane.svg" alt="紙飛行機">
             </div>
+
+ <div class="scroll_wrap">
+  <div class="scroll">
+    <span>SCROLL</span>
+  </div>
+  <div class="scrollbar"></div>
+</div>
     </header>
 
     <!-- 導入部分 -->
@@ -226,19 +233,36 @@
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
+                $('html,body').css('overflow', 'hidden')
+            })
+
+            $('.sp_nav li').on('click', function () {
+                $('.sp_nav').fadeOut();
+                $('.sp_btn').toggleClass('open')
             })
         })
+
+        $(function () {
+            $(window).scroll(function () {
+                var scrollPosition = $(window).scrollTop();
+                if (scrollPosition >= 400) {
+                    $(".pagetop").css("opacity", "1");
+                } else {
+                    $(".pagetop").css("opacity", "0");
+                }
+            });
+        });
     </script>
 
     <script>
-            (function (d) {
-                var config = {
-                    kitId: 'rvv1cym',
-                    scriptTimeout: 3000,
-                    async: true
-                },
-                    h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-            })(document);
+        (function (d) {
+            var config = {
+                kitId: 'rvv1cym',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
     </script>
 
     <script type="text/javascript">
