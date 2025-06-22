@@ -67,6 +67,28 @@
     margin: 0 auto;
 }
 
+/* 紙飛行機のふわふわ */
+.fuwafuwa {
+    animation: fuwafuwa 3s ease-in-out infinite alternate;
+    background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0) rotate(-7deg);
+    }
+
+    50% {
+        transform: translate(0, -7px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(7deg);
+    }
+}
+
 /* スクロール */
 .scroll_wrap {
     margin-top: 100px;
@@ -417,9 +439,9 @@
     }
 
     .sentence_group {
-        max-width: 280px;
+        max-width: 500px;
         width: 100%;
-        margin: 0 auto;
+        margin: 10px auto 0;
     }
 
     .sentence {
@@ -616,5 +638,28 @@
         padding-left: 5px;
         padding-right: 5px;
         box-sizing: border-box;
+    }
+}
+
+/* コンテンツのフェードイン */
+.scroll-space {
+    box-sizing: border-box;
+    /* height: 1600px; */
+    color: #fff;
+    overflow: hidden;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: all 1.5s;
+
+    &.fadein-bottom {
+        transform: translate(0, 30px);
+    }
+
+    &.scrollin {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
     }
 }
