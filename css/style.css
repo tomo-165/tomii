@@ -315,7 +315,7 @@
 
 .WORKS_photo img {
     transition: all 300ms ease;
-    transform: scale(0.8)
+    transform: scale(0.8);
 }
 
 .WORKS_photo img.slick-center {
@@ -348,11 +348,15 @@
     }
 
     .WORKS_photo img {
-        transform: scale(0.5)
+        transform: scale(0.5);
     }
 
     .more1 {
         font-size: 13px;
+    }
+
+    .more {
+        margin-bottom: 120px;
     }
 }
 
@@ -441,7 +445,7 @@
     .sentence_group {
         max-width: 500px;
         width: 100%;
-        margin: 10px auto 0;
+        margin: 10px auto 50p;
     }
 
     .sentence {
