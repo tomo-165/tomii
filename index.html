@@ -60,13 +60,14 @@
                 <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
                 <img class="top_plane fuwafuwa" src="./images/top_plane.svg" alt="紙飛行機">
             </div>
+        </div>
 
-            <div class="scroll_wrap">
-                <div class="scroll">
-                    <span>SCROLL</span>
-                </div>
-                <div class="scrollbar"></div>
+        <div class="scroll_wrap">
+            <div class="scroll">
+                <span>SCROLL</span>
             </div>
+            <div class="scrollbar"></div>
+        </div>
     </header>
 
     <!-- 導入部分 -->
@@ -243,15 +244,17 @@
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
-                $('html,body').css('overflow', 'hidden')
+                $('body').css('overflow', 'hidden')
             })
 
-            $('.sp_nav li').on('click', function () {
+            $('.sp_nav a').on('click', function () {
                 $('.sp_nav').fadeOut();
                 $('.sp_btn').toggleClass('open');
+                $('body').css('overflow', 'auto')
             })
         })
 
+        // トップページボタンの動き
         $(function () {
             $(window).scroll(function () {
                 var scrollPosition = $(window).scrollTop();
@@ -259,6 +262,20 @@
                     $(".pagetop").css("opacity", "1");
                 } else {
                     $(".pagetop").css("opacity", "0");
+                }
+            });
+        });
+
+        // 紙飛行機の動き
+        $(function () {
+            let hasStarted = false;
+
+            $(window).on("scroll", function () {
+                const scrollPos = $(window).scrollTop();
+
+                if (scrollPos >= 500 && !hasStarted) {
+                    $(".plane").addClass("fluffy"); // アニメーションを開始
+                    hasStarted = true;
                 }
             });
         });
@@ -312,6 +329,22 @@
 
                 if (scroll > elemPos - windowHeight + 150) {
                     $(this).addClass('scrollin');
+                }
+            });
+        });
+    </script>
+
+    <!-- 紙飛行機移動 -->
+    <script>
+        $(function () {
+            let hasStarted = false;
+
+            $(window).on("scroll", function () {
+                const scrollPos = $(window).scrollTop();
+
+                if (scrollPos >= 500 && !hasStarted) {
+                    $(".plane").addClass("fluffy"); // アニメーションを開始
+                    hasStarted = true;
                 }
             });
         });

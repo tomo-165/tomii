@@ -70,7 +70,7 @@
 /* 紙飛行機のふわふわ */
 .fuwafuwa {
     animation: fuwafuwa 3s ease-in-out infinite alternate;
-    background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+    background: url(./images/top_plane.svg) no-repeat center center / 60px auto;
     display: inline-block;
     transition: 1.5s ease-in-out;
 }
@@ -91,14 +91,15 @@
 
 /* スクロール */
 .scroll_wrap {
-    margin-top: 100px;
+    position: relative;
+    top: 20px;
 }
 
 .scroll {
     display: inline-block;
     position: absolute;
     bottom: 0;
-    padding: 10px 10px 110px;
+    padding: 10px 10px 60px;
     color: white;
     font-size: 14px;
     line-height: 1;
@@ -121,7 +122,7 @@
     bottom: 0;
     left: 0;
     width: 1px;
-    height: 100px;
+    height: 50px;
     background: #103099;
     animation: liner 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
@@ -188,6 +189,11 @@
 
 
 /* 導入部分 */
+#intro {
+    padding-top: 180px;
+    position: relative;
+}
+
 #intro p {
     text-align: center;
     font-size: 28px;
@@ -203,16 +209,69 @@
     font-family: ta-koigokoro, sans-serif;
 }
 
-.plane {
+/* .plane {
     width: 100px;
-    margin-top: 120px;
+    position: absolute;
     margin-left: 120px;
-}
+    /* top: 0;
+    left: -100px;
+    top: 80%;
+    left: 80%; */
+/* animation: moveRight 4s linear;
+
+} */
 
 .hand {
     width: 140px;
     margin: 50px 100px 205px auto;
 }
+
+/* 紙飛行機移動 */
+.plane {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    width: 100px;
+    opacity: 1;
+}
+
+.plane.fluffy {
+    animation: fluffyFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes fluffyFloat {
+    0% {
+        top: 120px;
+        left: 100px;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        top: 16%;
+        left: 16%;
+        transform: translate(10px, -10px) rotate(2deg);
+    }
+
+    50% {
+        top: 40%;
+        left: 40%;
+        transform: translate(0px, -15px) rotate(-2deg);
+    }
+
+    75% {
+        top: 64%;
+        left: 64%;
+        transform: translate(-10px, -10px) rotate(2deg);
+    }
+
+    100% {
+        top: 80%;
+        left: 80%;
+        transform: translate(0, 0) rotate(-1deg);
+    }
+}
+
+/* ここまで */
 
 @media screen and (max-width: 860px) {
     .sp_br1 {
@@ -313,12 +372,12 @@
     align-items: flex-start;
 }
 
-.WORKS_photo img {
+.WORKS_photo a {
     transition: all 300ms ease;
     transform: scale(0.8);
 }
 
-.WORKS_photo img.slick-center {
+.WORKS_photo .slick-center {
     opacity: 1;
     transform: scale(1);
 }
@@ -347,7 +406,7 @@
         border-left: 2px solid #bedaf6;
     }
 
-    .WORKS_photo img {
+    .WORKS_photo a {
         transform: scale(0.5);
     }
 

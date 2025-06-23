@@ -262,6 +262,7 @@ h4 {
 
     .sp_mobile-content img {
         max-width: 500px;
+        width: 100%;
     }
 
 
