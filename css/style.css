@@ -190,7 +190,7 @@
 
 /* 導入部分 */
 #intro {
-    padding-top: 180px;
+    padding: 180px 0;
     position: relative;
 }
 
@@ -223,7 +223,8 @@
 
 .hand {
     width: 140px;
-    margin: 50px 100px 205px auto;
+    position: absolute;
+    left: 80%;
 }
 
 /* 紙飛行機移動 */
