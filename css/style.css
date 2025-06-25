@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ヘッダー */
-#header {
+#HEADER {
     position: relative;
 }
 
@@ -21,7 +21,7 @@
     width: 150px;
 }
 
-.top_photo picture {
+.main_photo picture {
     width: 100%;
 }
 

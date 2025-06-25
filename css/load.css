@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* Loading背景画面設定　*/
+#load img {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.load img {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: 75%;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

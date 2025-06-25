@@ -13,9 +13,24 @@
     <link rel=" stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/load.css">
 </head>
 
 <body>
+    <!-- ローディング -->
+    <div id="load">
+        <img src="./images/top.jpg" alt="" class="fadeUp">
+    </div>
+    <div id="load2">
+        <div class="load_img">
+            <img class="load_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
+            <img class="load_plane" src="./images/top_plane.svg" alt="紙飛行機">
+        </div>
+    </div>
+
+    <!-- ここまで -->
+
+
     <!-- ヘッダー -->
     <header id="HEADER">
         <div class="main_photo">
@@ -349,6 +364,15 @@
             });
         });
     </script>
+
+    <!-- ローディング -->
+    <script>
+        $(window).on('load', function () {
+            $("#load").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+            $("#load2").delay(4000).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+        });
+    </script>
+    <!-- ローディング -->
 
 </body>
 
