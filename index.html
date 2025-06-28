@@ -289,14 +289,40 @@
         });
 
         // 紙飛行機の動き
+        // $(function () {
+        //     let hasStarted = false;
+
+        //     $(window).on("scroll", function () {
+        //         const scrollPos = $(window).scrollTop();
+
+        //         if (scrollPos >= 500 && !hasStarted) {
+        //             $(".plane").addClass("fluffy"); // アニメーションを開始
+        //             hasStarted = true;
+        //         }
+        //     });
+        // });
+
         $(function () {
             let hasStarted = false;
 
             $(window).on("scroll", function () {
                 const scrollPos = $(window).scrollTop();
+                const windowWidth = $(window).width();
 
-                if (scrollPos >= 500 && !hasStarted) {
-                    $(".plane").addClass("fluffy"); // アニメーションを開始
+                // 画面幅に応じてトリガー位置を変える
+                let triggerPos;
+
+                if (windowWidth <= 550) {
+                    triggerPos = 300; // スマホ（狭い）
+                } else if (windowWidth <= 767) {
+                    triggerPos = 400; // タブレット
+                } else {
+                    triggerPos = 500; // PCなど
+                }
+
+                // スクロール位置が条件を満たしたらアニメーション開始
+                if (scrollPos >= triggerPos && !hasStarted) {
+                    $("#intro a").addClass("fluffy");
                     hasStarted = true;
                 }
             });

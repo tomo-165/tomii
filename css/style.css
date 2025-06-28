@@ -213,18 +213,6 @@
     font-family: ta-koigokoro, sans-serif;
 }
 
-/* .plane {
-    width: 100px;
-    position: absolute;
-    margin-left: 120px;
-    /* top: 0;
-    left: -100px;
-    top: 80%;
-    left: 80%; */
-/* animation: moveRight 4s linear;
-
-} */
-
 .hand {
     width: 140px;
     position: absolute;
@@ -252,8 +240,8 @@
     }
 
     25% {
-        top: 16%;
-        left: 16%;
+        top: 20%;
+        left: 20%;
         transform: translate(10px, -10px) rotate(2deg);
     }
 
@@ -286,6 +274,74 @@
 
 @media screen and (max-width: 767px) {
     #intro h2 {
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    #intro p {
+        font-size: 20px;
+    }
+
+    #intro .plane {
+        width: 75px;
+        margin-top: 80px;
+        margin-left: 30px;
+    }
+
+    .hand {
+        width: 100px;
+        margin: 10px 30px 100px auto;
+    }
+
+    /* 紙飛行機移動 */
+    .plane {
+        position: absolute;
+        top: 95px;
+        left: 0px;
+        width: 100px;
+        opacity: 1;
+    }
+
+    .plane.fluffy {
+        animation: fluffyFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+    }
+
+    @keyframes fluffyFloat {
+        0% {
+            top: 95px;
+            left: 0px;
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        25% {
+            top: 16%;
+            left: 16%;
+            transform: translate(10px, -10px) rotate(2deg);
+        }
+
+        50% {
+            top: 40%;
+            left: 40%;
+            transform: translate(0px, -15px) rotate(-2deg);
+        }
+
+        75% {
+            top: 64%;
+            left: 64%;
+            transform: translate(-10px, -10px) rotate(2deg);
+        }
+
+        100% {
+            top: 67%;
+            left: 75%;
+            transform: translate(0, 0) rotate(-1deg);
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #intro h2 {
         font-size: 20px;
         margin-top: 10px;
         margin-bottom: 50px;
@@ -295,15 +351,128 @@
         font-size: 16px;
     }
 
+    #intro .plane {
+        width: 60px;
+        margin-top: 80px;
+        margin-left: 30px;
+    }
+
+    .hand {
+        width: 80px;
+        margin: 10px 30px 100px auto;
+    }
+
+    /* 紙飛行機移動 */
     .plane {
+        position: absolute;
+        top: 85px;
+        left: 0px;
+        width: 100px;
+        opacity: 1;
+    }
+
+    .plane.fluffy {
+        animation: fluffyFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+    }
+
+    @keyframes fluffyFloat {
+        0% {
+            top: 85px;
+            left: 0px;
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        25% {
+            top: 16%;
+            left: 16%;
+            transform: translate(10px, -10px) rotate(2deg);
+        }
+
+        50% {
+            top: 30%;
+            left: 30%;
+            transform: translate(0px, -15px) rotate(-2deg);
+        }
+
+        75% {
+            top: 50%;
+            left: 50%;
+            transform: translate(-10px, -10px) rotate(2deg);
+        }
+
+        100% {
+            top: 64%;
+            left: 75%;
+            transform: translate(0, 0) rotate(-1deg);
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #intro h2 {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    #intro p {
+        font-size: 14px;
+    }
+
+    #intro .plane {
         width: 50px;
         margin-top: 80px;
         margin-left: 30px;
     }
 
     .hand {
-        width: 67px;
+        width: 50px;
         margin: 10px 30px 100px auto;
+    }
+
+    /* 紙飛行機移動 */
+    .plane {
+        position: absolute;
+        top: 85px;
+        left: -20px;
+        width: 100px;
+        opacity: 1;
+    }
+
+    .plane.fluffy {
+        animation: fluffyFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+    }
+
+    @keyframes fluffyFloat {
+        0% {
+            top: 85px;
+            left: -20px;
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        25% {
+            top: 25%;
+            left: 25%;
+            transform: translate(10px, -10px) rotate(2deg);
+        }
+
+        50% {
+            top: 40%;
+            left: 40%;
+            transform: translate(0px, -15px) rotate(-2deg);
+        }
+
+        75% {
+            top: 50%;
+            left: 50%;
+            transform: translate(-10px, -10px) rotate(2deg);
+        }
+
+        100% {
+            top: 61%;
+            left: 69%;
+            transform: translate(0, 0) rotate(-1deg);
+        }
     }
 }
 
