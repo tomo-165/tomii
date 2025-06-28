@@ -121,6 +121,22 @@
         })
     </script>
 
+    <!-- 紙飛行機移動 -->
+    <script>
+        $(function () {
+            let hasStarted = false;
+
+            $(window).on("scroll", function () {
+                const scrollPos = $(window).scrollTop();
+
+                if (scrollPos >= 0 && !hasStarted) {
+                    $(".plane").addClass("fluffy"); // アニメーションを開始
+                    hasStarted = true;
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
