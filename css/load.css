@@ -1,39 +1,135 @@
 @charset "utf-8";
 
 /* Loading背景画面設定　*/
-#load img {
-    /*fixedで全面に固定*/
+#load .sky {
     position: fixed;
     width: 100%;
-    z-index: 999;
+    height: 100%;
+    z-index: 1000;
+    object-fit: cover;
 }
 
-.load img {
+#load {
+    position: relative;
+}
+
+
+.load_img {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    z-index: 2000;
+}
+
+/* 紙飛行機：先に飛ばす */
+.load_plane {
     position: absolute;
-    top: 37%;
-    left: 50%;
-    box-sizing: border-box;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    width: 75%;
-}
-
-/* fadeUpをするアイコンの動き */
-.fadeUp {
-    animation-name: fadeUpAnime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
     opacity: 0;
+    width: 145px;
+    height: auto;
+    animation: flyAcross 5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    z-index: 2;
 }
 
-@keyframes fadeUpAnime {
-    from {
+/* 軌跡 */
+.load_traj {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    opacity: 1;
+    width: 100vw;
+    height: auto;
+    animation: slideThenHoldFade 5.8s ease-in-out forwards;
+    animation-delay: 2.2s;
+    z-index: 1;
+}
+
+@keyframes flyAcross {
+    0% {
+        transform: translateX(-80%);
         opacity: 0;
-        transform: translateY(100px);
     }
 
-    to {
+    10% {
         opacity: 1;
-        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 150px));
+        opacity: 1;
+    }
+}
+
+@keyframes slideThenHoldFade {
+    0% {
+        left: -100vw;
+        opacity: 1;
+    }
+
+    50% {
+        left: 0;
+        opacity: 1;
+    }
+
+    75% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0;
+        opacity: 0;
+        /* フェードアウト */
+    }
+}
+
+/* ロゴマーク */
+#load .load_logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 3000;
+    animation: fadeInCenter 2s ease-in-out forwards;
+    animation-delay: 7s;
+}
+
+.load_logo img {
+    width: 260px;
+    height: auto;
+    display: block;
+}
+
+@keyframes fadeInCenter {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* ローディングのあと */
+#load.fade-out {
+    animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }

@@ -179,6 +179,10 @@
         max-width: 45px;
         /* padding-bottom: 25px; */
     }
+
+    .scroll {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -390,11 +394,11 @@
 
 @media screen and (max-width: 767px) {
     .slick-next {
-        right: 10%;
+        right: 3%;
     }
 
     .slick-prev {
-        left: 10%;
+        left: 3%;
     }
 
     .slick-next:before {

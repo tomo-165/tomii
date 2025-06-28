@@ -19,239 +19,244 @@
 <body>
     <!-- ローディング -->
     <div id="load">
-        <img src="./images/top.jpg" alt="" class="fadeUp">
-    </div>
-    <div id="load2">
+        <img class="sky" src="./images/top.jpg" alt="空">
         <div class="load_img">
-            <img class="load_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
+            <img class="load_traj" src="./images/top_traj.svg" alt="軌跡">
             <img class="load_plane" src="./images/top_plane.svg" alt="紙飛行機">
+        </div>
+        <div class="load_logo">
+            <img src="./images/logo.svg" alt="ロゴマーク">
         </div>
     </div>
 
     <!-- ここまで -->
 
-
-    <!-- ヘッダー -->
-    <header id="HEADER">
-        <div class="main_photo">
-            <div>
-                <picture>
-                    <source srcset="./images/headertop_sp.jpg" media="(max-width:767px)">
-                    <img src="./images/top.jpg" alt="空の写真">
-                </picture>
-            </div>
-        </div>
-        <div class="header_wrap">
-            <h1 class="header_logo">
-                <a href="#HEADER"><img src="./images/logo.svg" alt="=ロゴマーク"></a>
-            </h1>
-            <nav class="pc_nav">
-                <ul>
-                    <li><a href="#HEADER">HOME</a></li>
-                    <li><a href="#WORKS">WORKS</a></li>
-                    <li><a href="#ABOUTME">ABOUT</a></li>
-                    <li><a href="#SKILL">SKILL</a></li>
-                    <li><a href="#CONTACT">CONTACT</a></li>
-                </ul>
-            </nav>
-
-            <div class="sp_btn">
-                <span></span>
-            </div>
-            <nav class="sp_nav">
-                <ul>
-                    <li><a href="#HEADER">HOME</a></li>
-                    <li><a href="#WORKS">WORKS</a></li>
-                    <li><a href="#ABOUTME">ABOUT</a></li>
-                    <li><a href="#SKILL">SKILL</a></li>
-                    <li><a href="#CONTACT">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="theme">
-            <h2>あなたによりそった<br class="sp_br">デザインを</h2>
-            <div class="theme_img">
-                <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
-                <img class="top_plane fuwafuwa" src="./images/top_plane.svg" alt="紙飛行機">
-            </div>
-        </div>
-
-        <div class="scroll_wrap">
-            <div class="scroll">
-                <span>SCROLL</span>
-            </div>
-            <div class="scrollbar"></div>
-        </div>
-    </header>
-
-    <!-- 導入部分 -->
-    <section id="intro">
-        <div class="plane">
-            <img src="./images/plane_b.svg" alt="紙飛行機">
-        </div>
-        <h2>
-            ～紙飛行機のように～
-        </h2>
-        <p>お客様の立場に立ってデザインを考え、<br class="sp_br1">一緒に作り上げていきます<br>紙飛行機がひらひらと舞って<br
-                class="sp_br1">手元に届くように<br>一緒に作り上げた作品を<br class="sp_br1">たくさんの方に届けたい</p>
-        <div class="hand">
-            <img src="./images/hand.svg" alt="手">
-        </div>
-    </section>
-
-    <!-- WORKS -->
-    <section id="WORKS" class="scroll-space">
-        <div class="fadein fadein-bottom">
-            <h2>
-                WORKS
-            </h2>
-            <div class="title_img">
-                <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
-                <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
-            </div>
-            <div class="WORKS_photo">
-                <a href="./banner2.html"><img src="./images/ice_top_sp.jpg"></a>
-                <a href="./banner3.html"><img src="./images/burgerluxu_top _sp.jpg"></a>
-                <a href="./banner4.html"><img src="./images/burgerpop_top_sp.jpg"></a>
-                <a href="./banner1.html"><img src="./images/mobile_top_sp.jpg"></a>
-                <a href="./web1.html"><img src="./images/workers_top_sp.jpg"></a>
-                <a href="./web2.html"><img src="./images/hair_top_sp.jpg"></a>
-                <a href="./web3.html"><img src="./images/cafe_top_sp.jpg"></a>
-                <a href="./web4.html"><img src="./images/port_top_sp.jpg"></a>
-            </div>
-            <div class="more">
-                <p class="more1 yajirusi"><a href="./works.html">一覧へ</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUTME -->
-    <section id="ABOUTME" class="scroll-space">
-        <div class="fadein fadein-bottom">
-            <h2>
-                ABOUT ME
-            </h2>
-            <div class="title_img">
-                <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
-                <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
-            </div>
-            <div class="about_group">
-                <div class="aboutme">
-                    <img src="./images/aboutme_1.jpg" alt="後ろ姿の写真">
-                </div>
-                <div class="sentence_group">
-                    <p class="name"><span class="namecolor">と</span>みなが <span class="namecolor">と</span>もこ</p>
-                    <p class="sentence">
-                        東京都在住。<br>現在は、気象など自然を相手に仕事をしています。広報での業務や人の命を守るためにはどのような伝え方、見せ方をするのがよいかを考えている時にデザインに出合いました。</p>
-                    <p class="more2 yajirusi2"><a href="./about.html">もっと知りたい</a></p>
+    <div id="main-content" style="display: none;">
+        <!-- ヘッダー -->
+        <header id="HEADER">
+            <div class="main_photo">
+                <div>
+                    <picture>
+                        <source srcset="./images/headertop_sp.jpg" media="(max-width:767px)">
+                        <img src="./images/top.jpg" alt="空の写真">
+                    </picture>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="header_wrap">
+                <h1 class="header_logo">
+                    <a href="#HEADER"><img src="./images/logo.svg" alt="=ロゴマーク"></a>
+                </h1>
+                <nav class="pc_nav">
+                    <ul>
+                        <li><a href="#HEADER">HOME</a></li>
+                        <li><a href="#WORKS">WORKS</a></li>
+                        <li><a href="#ABOUTME">ABOUT</a></li>
+                        <li><a href="#SKILL">SKILL</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
 
-    <!-- SKILL -->
-    <section id="SKILL" class="scroll-space">
-        <div class="fadein fadein-bottom">
-            <h2>
-                SKILL
-            </h2>
-            <div class="title_img">
-                <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
-                <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
+                <div class="sp_btn">
+                    <span></span>
+                </div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#HEADER">HOME</a></li>
+                        <li><a href="#WORKS">WORKS</a></li>
+                        <li><a href="#ABOUTME">ABOUT</a></li>
+                        <li><a href="#SKILL">SKILL</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
-            <ul>
-                <li class="design_box">
-                    <div class="skill_design">
-                        <h3 class="skill_title">デザイン</h3>
-                        <div class="design">
-                            <img src="./images/design.svg" alt="イラスト">
-                        </div>
-                        <p class="skill">illustrator/Photoshop/Figma</p>
-                        <p class="skill_detail">
-                            基本的な操作は可能です。ポートフォリオのデザインは、illustrator及びPhotoshopを使用しました。Photoshopでは、切り抜きや合成、写真の加工ができます。</p>
-                    </div>
-                </li>
-                <li class="code_box">
-                    <div class="skill_code">
-                        <h3 class="skill_title">コーディング</h3>
-                        <div class="code">
-                            <img src="./images/code.svg" alt="イラスト">
-                        </div>
-                        <p class="skill">HTML/CSS/JavaScript/jQuery</p>
-                        <p class="skill_detail">コーディングでは、Visual Studio
-                            Codeを使用し、命名規則を用いたコーディングができます。どの端末でも見やすいように、レスポンシブ対応ができます。</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="CONTACT">
-        <div class="scroll-space">
+            <div class="theme">
+                <h2>あなたによりそった<br class="sp_br">デザインを</h2>
+                <div class="theme_img">
+                    <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
+                    <img class="top_plane fuwafuwa" src="./images/top_plane.svg" alt="紙飛行機">
+                </div>
+            </div>
+
+            <div class="scroll_wrap">
+                <div class="scroll">
+                    <span>SCROLL</span>
+                </div>
+                <div class="scrollbar"></div>
+            </div>
+        </header>
+
+        <!-- 導入部分 -->
+        <section id="intro">
+            <div class="plane">
+                <img src="./images/plane_b.svg" alt="紙飛行機">
+            </div>
+            <h2>
+                ～紙飛行機のように～
+            </h2>
+            <p>お客様の立場に立ってデザインを考え、<br class="sp_br1">一緒に作り上げていきます<br>紙飛行機がひらひらと舞って<br
+                    class="sp_br1">手元に届くように<br>一緒に作り上げた作品を<br class="sp_br1">たくさんの方に届けたい</p>
+            <div class="hand">
+                <img src="./images/hand.svg" alt="手">
+            </div>
+        </section>
+
+        <!-- WORKS -->
+        <section id="WORKS" class="scroll-space">
             <div class="fadein fadein-bottom">
                 <h2>
-                    CONTACT
+                    WORKS
                 </h2>
                 <div class="title_img">
                     <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
                     <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
                 </div>
-                <p class="contact_lang">
-                    当サイトをご覧いただきありがとうございます。<br>
-                    制作のご相談やご依頼は<br class="sp_br2">こちらからお気軽にお問い合わせください。<br>
-                    お問い合わせいただいた内容を確認後、<br class="sp_br2">ご連絡いたします。
-                </p>
+                <div class="WORKS_photo">
+                    <a href="./banner2.html"><img src="./images/ice_top_sp.jpg"></a>
+                    <a href="./banner3.html"><img src="./images/burgerluxu_top _sp.jpg"></a>
+                    <a href="./banner4.html"><img src="./images/burgerpop_top_sp.jpg"></a>
+                    <a href="./banner1.html"><img src="./images/mobile_top_sp.jpg"></a>
+                    <a href="./web1.html"><img src="./images/workers_top_sp.jpg"></a>
+                    <a href="./web2.html"><img src="./images/hair_top_sp.jpg"></a>
+                    <a href="./web3.html"><img src="./images/cafe_top_sp.jpg"></a>
+                    <a href="./web4.html"><img src="./images/port_top_sp.jpg"></a>
+                </div>
+                <div class="more">
+                    <p class="more1 yajirusi"><a href="./works.html">一覧へ</a></p>
+                </div>
             </div>
+        </section>
+
+        <!-- ABOUTME -->
+        <section id="ABOUTME" class="scroll-space">
+            <div class="fadein fadein-bottom">
+                <h2>
+                    ABOUT ME
+                </h2>
+                <div class="title_img">
+                    <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
+                    <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
+                </div>
+                <div class="about_group">
+                    <div class="aboutme">
+                        <img src="./images/aboutme_1.jpg" alt="後ろ姿の写真">
+                    </div>
+                    <div class="sentence_group">
+                        <p class="name"><span class="namecolor">と</span>みなが <span class="namecolor">と</span>もこ</p>
+                        <p class="sentence">
+                            東京都在住。<br>現在は、気象など自然を相手に仕事をしています。広報での業務や人の命を守るためにはどのような伝え方、見せ方をするのがよいかを考えている時にデザインに出合いました。
+                        </p>
+                        <p class="more2 yajirusi2"><a href="./about.html">もっと知りたい</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILL -->
+        <section id="SKILL" class="scroll-space">
+            <div class="fadein fadein-bottom">
+                <h2>
+                    SKILL
+                </h2>
+                <div class="title_img">
+                    <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
+                    <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
+                </div>
+                <ul>
+                    <li class="design_box">
+                        <div class="skill_design">
+                            <h3 class="skill_title">デザイン</h3>
+                            <div class="design">
+                                <img src="./images/design.svg" alt="イラスト">
+                            </div>
+                            <p class="skill">illustrator/Photoshop/Figma</p>
+                            <p class="skill_detail">
+                                基本的な操作は可能です。ポートフォリオのデザインは、illustrator及びPhotoshopを使用しました。Photoshopでは、切り抜きや合成、写真の加工ができます。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="code_box">
+                        <div class="skill_code">
+                            <h3 class="skill_title">コーディング</h3>
+                            <div class="code">
+                                <img src="./images/code.svg" alt="イラスト">
+                            </div>
+                            <p class="skill">HTML/CSS/JavaScript/jQuery</p>
+                            <p class="skill_detail">コーディングでは、Visual Studio
+                                Codeを使用し、命名規則を用いたコーディングができます。どの端末でも見やすいように、レスポンシブ対応ができます。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="CONTACT">
+            <div class="scroll-space">
+                <div class="fadein fadein-bottom">
+                    <h2>
+                        CONTACT
+                    </h2>
+                    <div class="title_img">
+                        <img class="traj_b" src="./images/traj_b.svg" alt="紙飛行機の軌跡">
+                        <img class="plane_b" src="./images/plane_b.svg" alt="紙飛行機">
+                    </div>
+                    <p class="contact_lang">
+                        当サイトをご覧いただきありがとうございます。<br>
+                        制作のご相談やご依頼は<br class="sp_br2">こちらからお気軽にお問い合わせください。<br>
+                        お問い合わせいただいた内容を確認後、<br class="sp_br2">ご連絡いたします。
+                    </p>
+                </div>
+            </div>
+
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYFG5sWPDONg5NS6D43Hgvllb0EY-XKZ3XbTd-i_GZlznLGg/formResponse"
+                method="POST" class="form" target="hidden_iframe" onsubmit="submitted=true;">
+                <div class="form_item">
+                    <label class="form_label" for="name">お名前<span class="contactcolor">（必須）</span></label>
+                    <input class="form_input" type="text" id="name" name="entry.1060607497" required="required">
+                </div>
+                <div class="form_item">
+                    <label class="form_label" for="email">メールアドレス<span class="contactcolor">（必須）</span></label>
+                    <input class="form_input" type="email" id="email" name="entry.715618150" required="required">
+                </div>
+                <div class="form_item">
+                    <label class="form_label" for="subject">件名</label>
+                    <input class="form_input" type="text" id="subject" name="entry.245928875" required="required">
+                </div>
+                <div class="form_item">
+                    <label class="form_label" for="message">お問い合わせ内容<span class="contactcolor">（必須）</span></label>
+                    <textarea class="form_input" id="message" name="entry.1554282653" rows="5" required></textarea>
+                </div>
+                <div class="form_submit">
+                    <button class="custom_button" type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
+                </div>
+            </form>
+        </section>
+
+        <!-- フッター -->
+        <footer id="FOOTER">
+            <div class="back_photo">
+                <picture>
+                    <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
+                    <img src="./images/futter.jpg" alt="空の写真">
+                </picture>
+            </div>
+            <div class="footer_wrap">
+                <h1 class="footer_logo">
+                    <img src="./images/logo.svg" alt="=ロゴマーク">
+                </h1>
+                <p>©tomii design 2025</p>
+            </div>
+        </footer>
+
+        <!-- TOPへ -->
+        <div class="pagetop">
+            <a href="#HEADER">
+                <img src="./images/top_button.png" alt="topへ">
+            </a>
         </div>
 
-        <form
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdYFG5sWPDONg5NS6D43Hgvllb0EY-XKZ3XbTd-i_GZlznLGg/formResponse"
-            method="POST" class="form" target="hidden_iframe" onsubmit="submitted=true;">
-            <div class="form_item">
-                <label class="form_label" for="name">お名前<span class="contactcolor">（必須）</span></label>
-                <input class="form_input" type="text" id="name" name="entry.1060607497" required="required">
-            </div>
-            <div class="form_item">
-                <label class="form_label" for="email">メールアドレス<span class="contactcolor">（必須）</span></label>
-                <input class="form_input" type="email" id="email" name="entry.715618150" required="required">
-            </div>
-            <div class="form_item">
-                <label class="form_label" for="subject">件名</label>
-                <input class="form_input" type="text" id="subject" name="entry.245928875" required="required">
-            </div>
-            <div class="form_item">
-                <label class="form_label" for="message">お問い合わせ内容<span class="contactcolor">（必須）</span></label>
-                <textarea class="form_input" id="message" name="entry.1554282653" rows="5" required></textarea>
-            </div>
-            <div class="form_submit">
-                <button class="custom_button" type="submit"><img src="./images/send.svg" alt="送信ボタン"></button>
-            </div>
-        </form>
-    </section>
-
-    <!-- フッター -->
-    <footer id="FOOTER">
-        <div class="back_photo">
-            <picture>
-                <source srcset="./images/futter_sp.jpg" media="(max-width:767px)">
-                <img src="./images/futter.jpg" alt="空の写真">
-            </picture>
-        </div>
-        <div class="footer_wrap">
-            <h1 class="footer_logo">
-                <img src="./images/logo.svg" alt="=ロゴマーク">
-            </h1>
-            <p>©tomii design 2025</p>
-        </div>
-    </footer>
-
-    <!-- TOPへ -->
-    <div class="pagetop">
-        <a href="#HEADER">
-            <img src="./images/top_button.png" alt="topへ">
-        </a>
     </div>
 
     <script>
@@ -259,13 +264,13 @@
             $('.sp_btn').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
-                $('body').css('overflow', 'hidden')
+                $('body').toggleClass('hidden')
             })
 
             $('.sp_nav a').on('click', function () {
                 $('.sp_nav').fadeOut();
                 $('.sp_btn').toggleClass('open');
-                $('body').css('overflow', 'auto')
+                $('body').removeClass('hidden')
             })
         })
 
@@ -366,14 +371,61 @@
     </script>
 
     <!-- ローディング -->
+    <!-- <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const load = document.getElementById('load');
+                load.classList.add('fade-out');
+
+                load.addEventListener('animationend', () => {
+                    load.style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                });
+            }, 11000);
+        });
+    </script> -->
+
     <script>
-        $(window).on('load', function () {
-            $("#load").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-            $("#load2").delay(4000).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+        document.addEventListener('DOMContentLoaded', () => {
+            // ローディング画面を非表示にする関数
+            const end_loader = () => {
+                const loader = document.getElementById('my-custom-loader-wrapper');
+                loader.style.transition = 'opacity 0.4s';
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 400);
+            }
+
+            // 初回セッションかどうかを確認する関数
+            const isFirstSession = () => {
+                return !sessionStorage.getItem('hasVisited');
+            }
+
+            // 初回セッションの場合にローディング画面の終了処理を実行
+            if (isFirstSession()) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        const load = document.getElementById('load');
+                        load.classList.add('fade-out');
+
+                        load.addEventListener('animationend', () => {
+                            load.style.display = 'none';
+                            document.getElementById('main-content').style.display = 'block';
+                        });
+                    }, 11000);
+                    // 初回セッションが終了したことを記録
+                    sessionStorage.setItem('hasVisited', 'true');
+                }, 3000);
+
+            } else {
+                // 初回セッションではない場合、ローディング画面を非表示にする
+                end_loader();
+            }
+
         });
     </script>
     <!-- ローディング -->
-
 </body>
 
 </html>

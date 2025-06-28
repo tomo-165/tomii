@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body.hidden {
+    overflow: hidden;
+}
+
 /* ヘッダー */
 #HEADER {
     position: relative;
@@ -17,7 +21,7 @@
     box-sizing: border-box;
 }
 
-.header_logo {
+.header_logo img {
     width: 150px;
 }
 
@@ -56,7 +60,7 @@
         padding: 0 3% 0 2.5%;
     }
 
-    .header_logo {
+    .header_logo img {
         width: 120px;
         padding-top: 17px;
     }
