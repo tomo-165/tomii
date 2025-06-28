@@ -13,6 +13,8 @@
     <link rel=" stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="shortcut icon" href="./images/favicon_16.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="./images/favicon_32.ico" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" type="text/css" href="./css/load.css">
 </head>
 
@@ -31,7 +33,7 @@
 
     <!-- ここまで -->
 
-    <div id="main-content" style="display: none;">
+    <div id="main-content">
         <!-- ヘッダー -->
         <header id="HEADER">
             <div class="main_photo">
@@ -371,32 +373,8 @@
     </script>
 
     <!-- ローディング -->
-    <!-- <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const load = document.getElementById('load');
-                load.classList.add('fade-out');
-
-                load.addEventListener('animationend', () => {
-                    load.style.display = 'none';
-                    document.getElementById('main-content').style.display = 'block';
-                });
-            }, 11000);
-        });
-    </script> -->
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // ローディング画面を非表示にする関数
-            const end_loader = () => {
-                const loader = document.getElementById('my-custom-loader-wrapper');
-                loader.style.transition = 'opacity 0.4s';
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 400);
-            }
-
             // 初回セッションかどうかを確認する関数
             const isFirstSession = () => {
                 return !sessionStorage.getItem('hasVisited');
@@ -406,23 +384,26 @@
             if (isFirstSession()) {
                 window.addEventListener('load', () => {
                     setTimeout(() => {
-                        const load = document.getElementById('load');
-                        load.classList.add('fade-out');
+                        // const end_loader = () => {
+                        const loader = document.getElementById('load');
+                        loader.style.transition = 'opacity 3s';
+                        loader.style.opacity = '0';
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 3000);
 
-                        load.addEventListener('animationend', () => {
-                            load.style.display = 'none';
-                            document.getElementById('main-content').style.display = 'block';
-                        });
+                        sessionStorage.setItem('hasVisited', 'true');
                     }, 11000);
-                    // 初回セッションが終了したことを記録
-                    sessionStorage.setItem('hasVisited', 'true');
-                }, 3000);
-
+                })
             } else {
                 // 初回セッションではない場合、ローディング画面を非表示にする
-                end_loader();
+                const loader = document.getElementById('load');
+                loader.style.transition = 'opacity 0.4s';
+                loader.style.opacity = '0';
+                // setTimeout(() => {
+                loader.style.display = 'none';
+                // }, 100);
             }
-
         });
     </script>
     <!-- ローディング -->
