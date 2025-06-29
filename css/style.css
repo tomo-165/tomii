@@ -23,6 +23,7 @@
 
 .main_photo picture {
     width: 100%;
+    z-index: 0;
 }
 
 .pc_nav ul {
@@ -36,35 +37,41 @@
     font-weight: SemiCondensed;
 }
 
+textPath {
+    font-family: ta-koigokoro, sans-serif;
+    fill: white;
+    font-size: 64px;
+}
+
+path {
+    width: 500px;
+    margin: auto;
+}
+
 .theme {
     position: absolute;
-    top: 37%;
+    height: 150px;
+    z-index: 10;
+    top: 40%;
     left: 50%;
     box-sizing: border-box;
     transform: translateX(-50%);
     white-space: nowrap;
-    width: 75%;
+    width: 73%;
+    display: flex;
 }
 
-.theme h2 {
-    font-family: ta-koigokoro, sans-serif;
-    color: white;
-    font-size: 55px;
-}
-
-.top_traj {
+#trajSVG {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 .top_plane {
-    max-width: 110px;
-    padding-bottom: 25px;
-}
-
-.theme_img {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
+    position: absolute;
+    top: 20%;
+    right: -15%;
+    width: 100px;
 }
 
 /* 紙飛行機のふわふわ */
@@ -165,8 +172,8 @@
 }
 
 @media screen and (max-width: 767px) {
-    .theme h2 {
-        font-size: 30px;
+    .textPath {
+        font-size: 35px;
         margin-top: 20px;
     }
 
@@ -176,8 +183,8 @@
     }
 
     .top_plane {
-        max-width: 45px;
-        /* padding-bottom: 25px; */
+        max-width: 53px;
+        top: 35%;
     }
 
     .scroll {
@@ -185,9 +192,19 @@
     }
 }
 
-@media screen and (max-width: 400px) {
-    .theme h2 {
+@media screen and (max-width: 480px) {
+    .textPath {
         font-size: 22px;
+    }
+
+    .top_plane {
+        max-width: 35px;
+        top: 40%;
+    }
+
+    .theme {
+        top: 29%;
+
     }
 }
 
@@ -415,6 +432,10 @@
         margin-bottom: 50px;
     }
 
+    #intro {
+        padding: 180px 0 50px;
+    }
+
     #intro p {
         font-size: 14px;
     }
@@ -427,7 +448,7 @@
 
     .hand {
         width: 50px;
-        margin: 10px 30px 100px auto;
+        margin: 10px 30px 30px auto;
     }
 
     /* 紙飛行機移動 */
@@ -495,7 +516,7 @@
 
 .more {
     text-align: right;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
 }
 
 .yajirusi::after {
@@ -507,6 +528,10 @@
     border-bottom: 1px solid #bedaf6;
     transform: skew(45deg);
     padding-right: 20px;
+}
+
+.fadein {
+    margin-top: 200px;
 }
 
 
@@ -594,6 +619,13 @@
 }
 
 
+@media screen and (max-width: 425px) {
+    .more {
+        margin-bottom: 0px;
+    }
+}
+
+
 
 /* ABOUTME */
 #ABOUTME {
@@ -603,7 +635,7 @@
 
 .about_group {
     display: flex;
-    margin-bottom: 300px;
+    margin-bottom: 120px;
     justify-content: space-between;
 }
 
@@ -700,7 +732,7 @@
     background-color: #f3fdff;
     width: 37%;
     height: 580px;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     box-shadow: inset 18px #ffffff;
 }
 

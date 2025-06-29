@@ -51,8 +51,14 @@
     }
 }
 
+svg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
 /* 軌跡 */
-/* .load_traj {
+.load_traj {
     position: absolute;
     top: 0;
     left: -100vw;
@@ -62,31 +68,9 @@
     animation: slideThenHoldFade 5.8s ease-in-out forwards;
     animation-delay: 2.2s;
     z-index: 1;
-} */
-
-.load_traj {
-    overflow: hidden;
-    position: relative;
 }
 
-.load_traj::before {
-    animation: load_traj 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    /* background: #fff; */
-    content: '';
-    inset: 0;
-    pointer-events: none;
-    position: absolute;
-    animation-delay: 2.2s;
-    z-index: 1;
-}
-
-@keyframes img-wrap {
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-/* @keyframes slideThenHoldFade {
+@keyframes slideThenHoldFade {
     0% {
         left: -100vw;
         opacity: 1;
@@ -106,7 +90,7 @@
         left: 0;
         opacity: 0;
     }
-} */
+}
 
 /* ロゴマーク */
 #load .load_logo {

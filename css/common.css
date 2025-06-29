@@ -156,6 +156,12 @@ body.hidden {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .header_logo img {
+        width: 105px;
+    }
+}
+
 /* 共通 */
 h2 {
     text-align: center;
@@ -198,6 +204,8 @@ h2 {
         padding-left: 55px;
     }
 }
+
+
 
 /* タイトルの紙飛行機のふわふわ */
 .fuwafuwa {

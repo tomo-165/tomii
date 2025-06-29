@@ -31,7 +31,6 @@
         </div>
     </div>
 
-    <!-- ここまで -->
 
     <div id="main-content">
         <!-- ヘッダー -->
@@ -72,12 +71,33 @@
                 </nav>
             </div>
 
-            <div class="theme">
+            <!-- 以下はうまくいけば削除する -->
+            <!-- <div class="theme">
                 <h2>あなたによりそった<br class="sp_br">デザインを</h2>
                 <div class="theme_img">
                     <img class="top_traj" src="./images/top_traj.svg" alt="紙飛行機の軌跡">
                     <img class="top_plane fuwafuwa" src="./images/top_plane.svg" alt="紙飛行機">
                 </div>
+            </div> -->
+            <!-- ここまで -->
+
+            <!-- 文字をパスに沿って -->
+            <div class="theme">
+                <svg id="trajSVG" viewBox="0 0 1089.47 55.47" xmlns="http://www.w3.org/2000/svg">
+                    <path id="trajPath" d="M.12,54.99c46.95-12.12,90.04-24.07,130.77-31.01,
+             48.98-8.34,93.41-13.75,133.47-16.49,52.36-3.58,
+             97.42-8.49,134.74-6.56,73.68,3.83,124.85,19.34,
+             176.13,29.33,51.52,10.03,102.91,18.66,176.65,20.52,
+             61.24,1.54,118.42-2.42,170.17-9.63,
+             65.76-9.15,123-20.97,167.29-33.84" fill="none" stroke="#fff" stroke-width="2" />
+
+                    <text>
+                        <textPath href="#trajPath" startOffset="50%" text-anchor="middle">
+                            あなたによりそったデザインを
+                        </textPath>
+                    </text>
+                </svg>
+                <img src="./images/top_plane.svg" alt="紙飛行機" class="top_plane fuwafuwa" />
             </div>
 
             <div class="scroll_wrap">
@@ -359,6 +379,9 @@
             });
         });
     </script>
+
+    <!-- 軌跡の動き -->
+
 
     <!-- ローディング -->
     <script>
