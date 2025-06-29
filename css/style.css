@@ -156,12 +156,13 @@ path {
     }
 }
 
-.sp_br,
+.text_sp,
 .sp_br1 {
     display: none;
 }
 
-@media screen and (max-width: 1130px) {
+/* 後で削除 */
+/* @media screen and (max-width: 1130px) {
     .sp_br {
         display: block;
     }
@@ -169,7 +170,8 @@ path {
     .theme h2 {
         font-size: 50px;
     }
-}
+} */
+/* ここまで */
 
 @media screen and (max-width: 767px) {
     .textPath {
@@ -189,6 +191,16 @@ path {
 
     .scroll {
         font-size: 10px;
+    }
+
+    /* ここまで */
+    .text_pc {
+        display: none;
+    }
+
+    .text_sp {
+        display: block;
+        font-size: 50px;
     }
 }
 
@@ -275,8 +287,8 @@ path {
     }
 
     100% {
-        top: 80%;
-        left: 80%;
+        top: 78%;
+        left: 81%;
         transform: translate(0, 0) rotate(-1deg);
     }
 }
@@ -286,6 +298,38 @@ path {
 @media screen and (max-width: 860px) {
     .sp_br1 {
         display: block;
+    }
+
+    @keyframes fluffyFloat {
+        0% {
+            top: 120px;
+            left: 100px;
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        25% {
+            top: 20%;
+            left: 20%;
+            transform: translate(10px, -10px) rotate(2deg);
+        }
+
+        50% {
+            top: 40%;
+            left: 40%;
+            transform: translate(0px, -15px) rotate(-2deg);
+        }
+
+        75% {
+            top: 64%;
+            left: 64%;
+            transform: translate(-10px, -10px) rotate(2deg);
+        }
+
+        100% {
+            top: 82%;
+            left: 81%;
+            transform: translate(0, 0) rotate(-1deg);
+        }
     }
 }
 
@@ -490,8 +534,8 @@ path {
         }
 
         100% {
-            top: 61%;
-            left: 69%;
+            top: 78%;
+            left: 72%;
             transform: translate(0, 0) rotate(-1deg);
         }
     }
