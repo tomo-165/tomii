@@ -58,6 +58,7 @@ path {
     transform: translateX(-50%);
     white-space: nowrap;
     width: 73%;
+    max-width: 1090px;
     display: flex;
 }
 
@@ -157,36 +158,42 @@ path {
 }
 
 .text_sp,
-.sp_br1 {
+.sp_br1,
+.top_traj_sp {
     display: none;
 }
 
-/* 後で削除 */
-/* @media screen and (max-width: 1130px) {
-    .sp_br {
-        display: block;
-    }
-
-    .theme h2 {
-        font-size: 50px;
-    }
-} */
-/* ここまで */
-
 @media screen and (max-width: 767px) {
-    .textPath {
+    /* .textPath {
         font-size: 35px;
         margin-top: 20px;
+    } */
+
+    #trajSVG {
+        display: none;
     }
 
-    .top_traj {
-        /* max-width: 1440px; */
+    .top_traj_sp {
+        display: block;
+        position: absolute;
         width: 100%;
+        top: 50%;
+        left: -4%;
+    }
+
+    .theme p {
+        display: block;
+        font-family: ta-koigokoro, sans-serif;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .top_plane {
         max-width: 53px;
-        top: 35%;
+        top: 41%;
+        right: -8%;
     }
 
     .scroll {
@@ -197,26 +204,38 @@ path {
     .text_pc {
         display: none;
     }
+}
 
-    .text_sp {
-        display: block;
-        font-size: 50px;
+@media screen and (max-width: 550px) {
+    .theme p {
+        font-size: 30px;
+    }
+
+    .top_traj_sp {
+        width: 88%;
+        left: 5%;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .textPath {
-        font-size: 22px;
+@media screen and (max-width: 435px) {
+    .theme p {
+        font-size: 19px;
+    }
+
+    .top_traj_sp {
+        width: 77%;
+        left: 9%;
+        top: 31%;
     }
 
     .top_plane {
-        max-width: 35px;
-        top: 40%;
+        max-width: 43px;
+        top: 26%;
+        right: -8%;
     }
 
-    .theme {
-        top: 29%;
-
+    .scroll {
+        font-size: 9px;
     }
 }
 

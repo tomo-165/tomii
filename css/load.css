@@ -61,13 +61,28 @@ svg {
 .load_traj {
     position: absolute;
     top: 0;
-    left: -100vw;
     opacity: 1;
     width: 100vw;
     height: auto;
-    animation: slideThenHoldFade 5.8s ease-in-out forwards;
-    animation-delay: 2.2s;
+    animation: writing 5s forwards;
+    animation-delay: 1.8s;
     z-index: 1;
+    stroke-dasharray: 1090px;
+    stroke-dashoffset: 1090px;
+}
+
+@keyframes writing {
+    0% {
+        stroke-dashoffset: 1090px;
+    }
+
+    90% {
+        stroke-dashoffset: 0px;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes slideThenHoldFade {
