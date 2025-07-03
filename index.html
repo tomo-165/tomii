@@ -424,6 +424,11 @@
         });
     </script>
 
+    <script>
+        window.addEventListener('load', () => {
+            window.dispatchEvent(new Event('resize'));
+        });
+    </script>
 </body>
 
 </html>
