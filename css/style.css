@@ -51,7 +51,6 @@ path {
 .theme {
     position: absolute;
     height: 150px;
-    z-index: 10;
     top: 40%;
     left: 50%;
     box-sizing: border-box;
@@ -164,10 +163,6 @@ path {
 }
 
 @media screen and (max-width: 767px) {
-    /* .textPath {
-        font-size: 35px;
-        margin-top: 20px;
-    } */
 
     #trajSVG {
         display: none;
@@ -675,10 +670,6 @@ path {
     .more1 {
         font-size: 13px;
     }
-
-    .more {
-        margin-bottom: 120px;
-    }
 }
 
 
@@ -976,7 +967,6 @@ path {
 /* コンテンツのフェードイン */
 .scroll-space {
     box-sizing: border-box;
-    /* height: 1600px; */
     color: #fff;
     overflow: hidden;
 }

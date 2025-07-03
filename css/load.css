@@ -107,6 +107,12 @@ svg {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .load_plane {
+        width: 80px;
+    }
+}
+
 /* ロゴマーク */
 #load .load_logo {
     position: fixed;
